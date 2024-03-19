@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/aplicacion.js"></script>
+  <title>Ofertas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #actionButton {
+      float: right;
+      background-color: #008476;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font: Arial;
+      font-size: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #content {
+      margin-top: 80px;
+      padding: 20px;
+      transition: margin-left 0.5s;
+    }
+
+    #oferta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+      column-count: 1;
+      column-gap: 20px;
+    }
+
+    #oferta h2 {
+      text-align: center;
+    }
+
+    .ofertas {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 10px;
+      width: 300px;
+    }
+
+    #menuSuperior {
+      background-color: white;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 30%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 3px 3px 3px 3px;
+      background-color: #088475;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 3px 3px 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: #088475;
+    }
+
+    /* Estilos para los puntos */
+    .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: white;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Estilos para las imágenes */
+    .img-container {
+      text-align: center;
+    }
+
+    .img-container img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="oferta">
+    <h1>Ofertas y descuentos</h1>
+    <div id="menuSuperior">
+      <input type="text" id="searchInput" placeholder="Buscar ofertas...">
+    </div>
+    <div class="ofertas">
+      <div class="slideshow-container" id="carrusel1">
+        <!-- Imágenes del carrusel 1 -->
+        <div class="mySlides">
+          <div class="img-container">
+            <img src="img/icon.png" style="width:50%">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="img-container">
+            <img src="img/beta.png" style="width:50%">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="img-container">
+            <img src="img/debug.png" style="width:50%">
+          </div>
+        </div>
+
+        <!-- Botones para cambiar de imagen -->
+        <a class="prev" onclick="carrusel1.plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="carrusel1.plusSlides(1)">&#10095;</a>
+
+        <div class="dot-container" style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+      <h2>Oferta 1</h2>
+      <p>Precio actual 1</p>
+      <p>Precio antiguo 1</p>
+      <button id="actionButton">Ver oferta</button><br>
+    </div>
+
+    <div class="ofertas">
+      <div class="slideshow-container" id="carrusel2">
+        <!-- Imágenes del carrusel 2 -->
+        <div class="mySlides">
+          <div class="img-container">
+            <img src="img/icon.png" style="width:50%">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="img-container">
+            <img src="img/beta.png" style="width:50%">
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div class="img-container">
+            <img src="img/debug.png" style="width:50%">
+          </div>
+        </div>
+
+        <!-- Botones para cambiar de imagen -->
+        <a class="prev" onclick="carrusel2.plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="carrusel2.plusSlides(1)">&#10095;</a>
+
+        <div class="dot-container" style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+      <h2>Oferta 2</h2>
+      <p>Precio actual 2</p>
+      <p>Precio antiguo 2</p>
+      <button id="actionButton">Ver oferta</button><br>
+    </div>
+
+    <!-- Agrega más sucursales según sea necesario -->
+
+  </div>
+  <script>
+    var carrusel1 = (function () {
+      var slideIndex = 1;
+      showSlides(slideIndex, 'carrusel1');
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n, 'carrusel1');
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n, 'carrusel1');
+      }
+
+      function showSlides(n, carruselId) {
+        var i;
+        var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
+        var dots = document.getElementById(carruselId).getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      return {
+        plusSlides: plusSlides,
+        currentSlide: currentSlide
+      };
+    })();
+
+    var carrusel2 = (function () {
+      var slideIndex = 1;
+      showSlides(slideIndex, 'carrusel2');
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n, 'carrusel2');
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n, 'carrusel2');
+      }
+
+      function showSlides(n, carruselId) {
+        var i;
+        var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
+        var dots = document.getElementById(carruselId).getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      return {
+        plusSlides: plusSlides,
+        currentSlide: currentSlide
+      };
+    })();
+
+    // Obtener el elemento de entrada de texto
+    const input = document.getElementById('searchInput');
+
+    // Agregar un evento de escucha para el evento 'input'
+    input.addEventListener('input', function () {
+      // Obtener el valor actual del campo de entrada
+      const valorBusqueda = input.value.toLowerCase();
+
+      // Obtener todos los elementos que deseas filtrar (por ejemplo, los productos)
+      const elementos = document.querySelectorAll('.ofertas');
+
+      // Iterar sobre los elementos y ocultar/mostrar según la búsqueda
+      elementos.forEach(function (elemento) {
+        // Obtener el texto del elemento a filtrar
+        const textoElemento = elemento.textContent.toLowerCase();
+
+        // Mostrar u ocultar el elemento según la coincidencia con la búsqueda
+        if (textoElemento.includes(valorBusqueda)) {
+          elemento.style.display = 'block'; // Mostrar el elemento
+        } else {
+          elemento.style.display = 'none'; // Ocultar el elemento
+        }
+      });
+    });
+
+    //Script logica api
+    logicaAplicacion.ofertaActual = 0 // Misma vaina
+
+    for (let i = 0; i < logicaAplicacion.ofertas[logicaAplicacion.ofertaActual].descuentos.length; i++) {
+      var newOffer = document.createElement('div')
+      newOffer.className = 'ofertas'
+
+      var offerName = document.createElement('h2')
+      offerName.textContent = logicaAplicacion.ofertas[logicaAplicacion.ofertaActual].descuentos[i].nombre
+
+      var precioActual = document.createElement('p')
+      precioActual.textContent = logicaAplicacion.ofertas[logicaAplicacion.ofertaActual].descuentos[i].precioAct
+
+      var precioAnterior = document.createElement('p')
+      precioAnterior.textContent = logicaAplicacion.ofertas[logicaAplicacion.ofertaActual].descuentos[i].precioAnt
+
+      var agregar = document.createElement('button')
+      agregar.textContent = 'Ver oferta'
+      agregar.setAttribute('id', 'actionButton')
+
+      newOffer.appendChild(offerName)
+      newOffer.appendChild(precioActual)
+      newOffer.appendChild(precioAnterior)
+      newOffer.appendChild(agregar)
+      document.getElementById('oferta').appendChild(newOffer)
+    }
+  </script>
+</body>
+
+</html>

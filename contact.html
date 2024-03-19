@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #actionButton {
+      float: right;
+      background-color: #008476;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font: Arial;
+      font-size: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #content {
+      margin-top: 80px;
+      padding: 20px;
+      transition: margin-left 0.5s;
+    }
+
+    .container {
+      display: block;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 0 auto;
+      width: 300px;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form id="register-form" action="index.html">
+      <h1>Formulario de contacto</h1>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="username" name="nombre" placeholder="Ingresa tu nombre" required><br>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="Ingresa tu correo electronico" required><br>
+
+      <label for="telefono">Telefono:</label>
+      <input type="text" id="phone" name="phone" placeholder="Ingresa tu numero de telefono" required><br>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="7" placeholder="Escribe tu mensaje" required></textarea><br>
+
+      <button id="actionButton" onclick="message()">Enviar mensaje</button><br>
+    </form>
+  </div>
+  <script>
+    function message() {
+      const nombre = document.getElementById('username').value;
+      const correo = document.getElementById('email').value;
+      const telefono = document.getElementById('phone').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      if(nombre === '' || correo === '' || telefono === '' || mensaje === '') {
+      }
+    }
+  </script>
+</body>
+
+</html>
