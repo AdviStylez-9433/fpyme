@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de imagenes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #actionButton {
+            float: right;
+            background-color: #008476;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font: Arial;
+            font-size: 20px;
+        }
+
+        #content {
+            padding: 20px;
+            transition: margin-left 0.5s;
+        }
+
+        #content.img {
+            margin: 0 auto;
+        }
+
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px 3px 3px 3px;
+            background-color: #088475;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 3px 3px 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #088475;
+        }
+
+        /* Estilos para los puntos */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Estilos para las imágenes */
+        .img-container {
+            text-align: center;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.sin-subrayado {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #008476;
+        }
+
+        a:link {
+            color: #008476;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1 style="text-align: center;">Nuestro equipo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
+            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+        <div class="slideshow-container" id="carrusel1">
+            <!-- Imágenes del carrusel 1 -->
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/icon.png" style="width:50%">
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/beta.png" style="width:50%">
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/debug.png" style="width:50%">
+                </div>
+            </div>
+
+            <!-- Botones para cambiar de imagen -->
+            <a class="prev" onclick="carrusel1.plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="carrusel1.plusSlides(1)">&#10095;</a>
+
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <h1 style="text-align: center;">Eventos importantes</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
+            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+        <div class="slideshow-container" id="carrusel2">
+            <!-- Imágenes del carrusel 2 -->
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/icon.png" style="width:50%">
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/beta.png" style="width:50%">
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/debug.png" style="width:50%">
+                </div>
+            </div>
+
+            <!-- Botones para cambiar de imagen -->
+            <a class="prev" onclick="carrusel2.plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="carrusel2.plusSlides(1)">&#10095;</a>
+
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <h1 style="text-align: center;">Premios y reconocimientos</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
+            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+        <div class="slideshow-container" id="carrusel3">
+            <!-- Imágenes del carrusel 2 -->
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/icon.png" style="width:50%">
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/beta.png" style="width:50%">
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <div class="img-container">
+                    <img src="img/debug.png" style="width:50%">
+                </div>
+            </div>
+
+            <!-- Botones para cambiar de imagen -->
+            <a class="prev" onclick="carrusel2.plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="carrusel2.plusSlides(1)">&#10095;</a>
+
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var carrusel1 = (function () {
+            var slideIndex = 1;
+            showSlides(slideIndex, 'carrusel1');
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n, 'carrusel1');
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n, 'carrusel1');
+            }
+
+            function showSlides(n, carruselId) {
+                var i;
+                var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
+                var dots = document.getElementById(carruselId).getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+
+            }
+
+            return {
+                plusSlides: plusSlides,
+                currentSlide: currentSlide
+            };
+        })();
+
+        var carrusel2 = (function () {
+            var slideIndex = 1;
+            showSlides(slideIndex, 'carrusel2');
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n, 'carrusel2');
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n, 'carrusel2');
+            }
+
+            function showSlides(n, carruselId) {
+                var i;
+                var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
+                var dots = document.getElementById(carruselId).getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+            
+
+            return {
+                plusSlides: plusSlides,
+                currentSlide: currentSlide
+            };
+        })();
+
+        var carrusel3 = (function () {
+            var slideIndex = 1;
+            showSlides(slideIndex, 'carrusel3');
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n, 'carrusel3');
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n, 'carrusel3');
+            }
+
+            function showSlides(n, carruselId) {
+                var i;
+                var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
+                var dots = document.getElementById(carruselId).getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+            
+
+            return {
+                plusSlides: plusSlides,
+                currentSlide: currentSlide
+            };
+        })();
+    </script>
+</body>
+
+</html>
