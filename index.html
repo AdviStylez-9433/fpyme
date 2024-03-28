@@ -299,41 +299,21 @@
                 }
             }
 
-            let startX;
-            let startY;
-            let isMoving = false;
-            let currentIndex = 0;
-
-            const carousel = document.querySelector('.carousel');
-            const images = document.querySelectorAll('.carousel-images img');
-
-            carousel.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                isMoving = true;
+            $(document).ready(function () {
+                $(".carousel-images").swipe({
+                    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                        if (direction == 'left') {
+                            $(".carousel-images").animate({ left: '-100%' }, 500);
+                        } else if (direction == 'right') {
+                            $(".carousel-images").animate({ left: '0' }, 500);
+                        }
+                    },
+                    threshold: 0
+                });
             });
-
-            carousel.addEventListener('touchmove', (e) => {
-                if (!isMoving) return;
-
-                const diffX = e.touches[0].clientX - startX;
-                const diffY = e.touches[0].clientY - startY;
-
-                if (Math.abs(diffX) > Math.abs(diffY)) {
-                    e.preventDefault();
-                    translateCarousel(currentIndex, diffX);
-                }
-            });
-
-            carousel.addEventListener('touchend', () => {
-                isMoving = false;
-            });
-
-            function translateCarousel(index, distance) {
-                const newPosition = -(index * carousel.offsetWidth) + distance;
-                carousel.querySelector('.carousel-images').style.transform = `translateX(${newPosition}px)`;
-            }
         </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="jquery.touchSwipe.min.js"></script>
 </body>
 
 </html>
