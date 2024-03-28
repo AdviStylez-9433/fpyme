@@ -296,7 +296,6 @@
             }
 
             const carousel = document.getElementById('carousel');
-            const slides = document.getElementById('slides');
             let isDragging = false;
             let startX;
             let scrollLeft;
@@ -314,9 +313,10 @@
             carousel.addEventListener('touchmove', (e) => {
                 if (!isDragging) return;
                 const x = e.touches[0].clientX;
-                const walk = (x - startX) * 3; // Ajusta este valor según lo rápido que desees que se desplace el carrusel
+                const walk = (x - startX) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
                 carousel.scrollLeft = scrollLeft - walk;
             });
+
 
         </script>
 </body>
