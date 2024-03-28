@@ -305,28 +305,23 @@
             }
             const carousel = document.getElementById('carousel');
             const slides = document.getElementById('slides');
-            let isMouseDown = false;
+            let isDragging = false;
             let startX;
             let scrollLeft;
 
-            carousel.addEventListener('mousedown', (e) => {
-                isMouseDown = true;
-                startX = e.pageX - carousel.offsetLeft;
+            carousel.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].clientX - carousel.offsetLeft;
                 scrollLeft = carousel.scrollLeft;
             });
 
-            carousel.addEventListener('mouseleave', () => {
-                isMouseDown = false;
+            carousel.addEventListener('touchend', () => {
+                isDragging = false;
             });
 
-            carousel.addEventListener('mouseup', () => {
-                isMouseDown = false;
-            });
-
-            carousel.addEventListener('mousemove', (e) => {
-                if (!isMouseDown) return;
-                e.preventDefault();
-                const x = e.pageX - carousel.offsetLeft;
+            carousel.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const x = e.touches[0].clientX - carousel.offsetLeft;
                 const walk = (x - startX) * 3;
                 carousel.scrollLeft = scrollLeft - walk;
             });
