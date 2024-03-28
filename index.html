@@ -45,23 +45,20 @@
 
         .carousel {
             width: 100%;
+            height: 100%;
             overflow: hidden;
-            position: relative;
         }
 
-        .carousel-images {
+        .slides {
             display: flex;
             transition: transform 0.5s ease;
-            gap: 10px;
-            /* Espacio entre las imágenes */
+            gap: 15px;
         }
 
-        .carousel-images img {
+        .slides img {
             width: 100%;
-            /* Todas las imágenes ocuparán el 100% del espacio disponible */
-            height: auto;
+            height: 100%;
             object-fit: cover;
-            /* Ajusta la imagen para llenar el espacio sin deformarla */
         }
 
         .prev,
@@ -268,12 +265,11 @@
         <h2>Galeria de fotos</h2>
         <p>Esta es una galeria de fotos con carrusel</p>
         <div class="slideshow-container">
-            <div class="carousel">
-                <div class="carousel-images">
+            <div class="carousel" id="carousel">
+                <div class="slides" id="slides">
                     <img src="img/galery1.jpg" alt="Image 1">
                     <img src="img/galery2.jpg" alt="Image 2">
                     <img src="img/galery3.jpg" alt="Image 3">
-                    <!-- Agrega más imágenes según sea necesario -->
                 </div>
             </div>
         </div>
@@ -298,22 +294,30 @@
                 if (correo === '') {
                 }
             }
+            const carousel = document.getElementById('carousel');
+            const slides = document.getElementById('slides');
+            let isDragging = false;
+            let startX;
+            let scrollLeft;
 
-            $(document).ready(function () {
-                $(".carousel-images").swipe({
-                    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                        if (direction == 'left') {
-                            $(".carousel-images").animate({ left: '-100%' }, 500);
-                        } else if (direction == 'right') {
-                            $(".carousel-images").animate({ left: '0' }, 500);
-                        }
-                    },
-                    threshold: 0
-                });
+            carousel.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].clientX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
             });
+
+            carousel.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            carousel.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const x = e.touches[0].clientX - carousel.offsetLeft;
+                const walk = (x - startX) * 3;
+                carousel.scrollLeft = scrollLeft - walk;
+            });
+
         </script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="jquery.touchSwipe.min.js"></script>
 </body>
 
 </html>
