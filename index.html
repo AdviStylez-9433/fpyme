@@ -299,6 +299,11 @@
                 }
             }
             var slideIndex = 1;
+            var isDragging = false;
+            var startX = 0;
+            var currentX = 0;
+            var threshold = 50; // Minimum distance to consider a swipe
+
             showSlides(slideIndex);
 
             function plusSlides(n) {
@@ -313,8 +318,14 @@
                 var i;
                 var slides = document.getElementsByClassName("mySlides");
                 var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
+
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+
                 for (i = 0; i < slides.length; i++) {
                     slides[i].style.display = "none";
                 }
@@ -323,6 +334,35 @@
                 }
                 slides[slideIndex - 1].style.display = "block";
                 dots[slideIndex - 1].className += " active";
+            }
+
+            // Event listeners for touch/mouse interactions
+            document.getElementById("myCarousel").addEventListener("mousedown", startDrag);
+            document.getElementById("myCarousel").addEventListener("touchstart", startDrag);
+            document.getElementById("myCarousel").addEventListener("mouseup", endDrag);
+            document.getElementById("myCarousel").addEventListener("touchend", endDrag);
+
+            function startDrag(event) {
+                isDragging = true;
+                startX = event.clientX || event.touches[0].clientX; // Get initial X position
+            }
+
+            function endDrag(event) {
+                if (!isDragging) return;
+                isDragging = false;
+                currentX = event.clientX || event.changedTouches[0].clientX; // Get final X position
+
+                // Calculate swipe distance
+                var swipeDistance = currentX - startX;
+
+                // Check if swipe is significant enough to trigger slide change
+                if (Math.abs(swipeDistance) > threshold) {
+                    if (swipeDistance > 0) {
+                        plusSlides(-1); // Swipe left: move to previous slide
+                    } else {
+                        plusSlides(1); // Swipe right: move to next slide
+                    }
+                }
             }
         </script>
 </body>
