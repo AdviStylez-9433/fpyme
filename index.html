@@ -43,6 +43,23 @@
             display: none;
         }
 
+        .carousel {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .prev,
         .next {
             cursor: pointer;
@@ -247,28 +264,16 @@
         <h2>Galeria de fotos</h2>
         <p>Esta es una galeria de fotos con carrusel</p>
         <div class="slideshow-container">
-            <!-- Imágenes del carrusel -->
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/icon.png" style="width:50%">
+            <div class="carousel" id="carousel">
+                <div class="slides" id="slides">
+                    <img src="img/beta.png" alt="Image 1">
+                    <img src="img/debug.png" alt="Image 2">
+                    <img src="img/icon.png" alt="Image 3">
+                    <img src="img/launcher.png" alt="image 4">+
+                    <img src="img/logo.png" alt="image 5">
+                    <img src="img/sponsor.png" alt="image 6">
                 </div>
             </div>
-
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/beta.png" style="width:50%">
-                </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/debug.png" style="width:50%">
-                </div>
-            </div>
-
-            <!-- Botones para cambiar de imagen -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
         <!-- Puntos para indicar la posición de la imagen actual -->
@@ -298,72 +303,34 @@
                 if (correo === '') {
                 }
             }
-            var slideIndex = 1;
-            var isDragging = false;
-            var startX = 0;
-            var currentX = 0;
-            var threshold = 50; // Minimum distance to consider a swipe
+            const carousel = document.getElementById('carousel');
+            const slides = document.getElementById('slides');
+            let isMouseDown = false;
+            let startX;
+            let scrollLeft;
 
-            showSlides(slideIndex);
+            carousel.addEventListener('mousedown', (e) => {
+                isMouseDown = true;
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+            });
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
+            carousel.addEventListener('mouseleave', () => {
+                isMouseDown = false;
+            });
 
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
+            carousel.addEventListener('mouseup', () => {
+                isMouseDown = false;
+            });
 
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
+            carousel.addEventListener('mousemove', (e) => {
+                if (!isMouseDown) return;
+                e.preventDefault();
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 3;
+                carousel.scrollLeft = scrollLeft - walk;
+            });
 
-                if (n > slides.length) {
-                    slideIndex = 1;
-                }
-                if (n < 1) {
-                    slideIndex = slides.length;
-                }
-
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-            }
-
-            // Event listeners for touch/mouse interactions
-            document.getElementById("myCarousel").addEventListener("mousedown", startDrag);
-            document.getElementById("myCarousel").addEventListener("touchstart", startDrag);
-            document.getElementById("myCarousel").addEventListener("mouseup", endDrag);
-            document.getElementById("myCarousel").addEventListener("touchend", endDrag);
-
-            function startDrag(event) {
-                isDragging = true;
-                startX = event.clientX || event.touches[0].clientX; // Get initial X position
-            }
-
-            function endDrag(event) {
-                if (!isDragging) return;
-                isDragging = false;
-                currentX = event.clientX || event.changedTouches[0].clientX; // Get final X position
-
-                // Calculate swipe distance
-                var swipeDistance = currentX - startX;
-
-                // Check if swipe is significant enough to trigger slide change
-                if (Math.abs(swipeDistance) > threshold) {
-                    if (swipeDistance > 0) {
-                        plusSlides(-1); // Swipe left: move to previous slide
-                    } else {
-                        plusSlides(1); // Swipe right: move to next slide
-                    }
-                }
-            }
         </script>
 </body>
 
