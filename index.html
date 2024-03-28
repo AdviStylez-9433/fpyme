@@ -45,19 +45,18 @@
 
         .carousel {
             width: 100%;
-            height: 100%;
             overflow: hidden;
+            position: relative;
         }
 
-        .slides {
+        .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
         }
 
-        .slides img {
+        .carousel-images img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
         }
 
         .prev,
@@ -264,11 +263,12 @@
         <h2>Galeria de fotos</h2>
         <p>Esta es una galeria de fotos con carrusel</p>
         <div class="slideshow-container">
-            <div class="carousel" id="carousel">
-                <div class="slides" id="slides">
+            <div class="carousel">
+                <div class="carousel-images">
                     <img src="img/beta.png" alt="Image 1" style="width: 50%; height: 50%;">
                     <img src="img/debug.png" alt="Image 2" style="width: 50%; height: 50%;">
                     <img src="img/icon.png" alt="Image 3" style="width: 50%; height: 50%;">
+                    <!-- Agrega más imágenes según sea necesario -->
                 </div>
             </div>
         </div>
@@ -293,29 +293,41 @@
                 if (correo === '') {
                 }
             }
-            const carousel = document.getElementById('carousel');
-            const slides = document.getElementById('slides');
-            let isDragging = false;
+
             let startX;
-            let scrollLeft;
+            let startY;
+            let isMoving = false;
+            let currentIndex = 0;
+
+            const carousel = document.querySelector('.carousel');
+            const images = document.querySelectorAll('.carousel-images img');
 
             carousel.addEventListener('touchstart', (e) => {
-                isDragging = true;
-                startX = e.touches[0].clientX - carousel.offsetLeft;
-                scrollLeft = carousel.scrollLeft;
-            });
-
-            carousel.addEventListener('touchend', () => {
-                isDragging = false;
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                isMoving = true;
             });
 
             carousel.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                const x = e.touches[0].clientX - carousel.offsetLeft;
-                const walk = (x - startX) * 3;
-                carousel.scrollLeft = scrollLeft - walk;
+                if (!isMoving) return;
+
+                const diffX = e.touches[0].clientX - startX;
+                const diffY = e.touches[0].clientY - startY;
+
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    e.preventDefault();
+                    translateCarousel(currentIndex, diffX);
+                }
             });
 
+            carousel.addEventListener('touchend', () => {
+                isMoving = false;
+            });
+
+            function translateCarousel(index, distance) {
+                const newPosition = -(index * carousel.offsetWidth) + distance;
+                carousel.querySelector('.carousel-images').style.transform = `translateX(${newPosition}px)`;
+            }
         </script>
 </body>
 
