@@ -126,34 +126,13 @@
         <h1 style="text-align: center;">Nuestro equipo</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
             ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
-        <div class="slideshow-container" id="carrusel1">
-            <!-- Imágenes del carrusel 1 -->
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/icon.png" style="width:50%">
+        <div class="slideshow-container">
+            <div class="carousel" id="carousel1">
+                <div class="slides" id="slides1">
+                    <img src="img/beta.png" alt="Image 1">
+                    <img src="img/debug.png" alt="Image 2">
+                    <img src="img/icon.png" alt="Image 3">
                 </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/beta.png" style="width:50%">
-                </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/debug.png" style="width:50%">
-                </div>
-            </div>
-
-            <!-- Botones para cambiar de imagen -->
-            <a class="prev" onclick="carrusel1.plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="carrusel1.plusSlides(1)">&#10095;</a>
-
-            <div class="dot-container" style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
     </div>
@@ -161,181 +140,106 @@
         <h1 style="text-align: center;">Eventos importantes</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
             ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
-        <div class="slideshow-container" id="carrusel2">
-            <!-- Imágenes del carrusel 2 -->
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/icon.png" style="width:50%">
+        <div class="slideshow-container">
+            <div class="carousel" id="carousel2">
+                <div class="slides" id="slides2">
+                    <img src="img/beta.png" alt="Image 4">
+                    <img src="img/debug.png" alt="Image 5">
+                    <img src="img/icon.png" alt="Image 6">
                 </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/beta.png" style="width:50%">
-                </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/debug.png" style="width:50%">
-                </div>
-            </div>
-
-            <!-- Botones para cambiar de imagen -->
-            <a class="prev" onclick="carrusel2.plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="carrusel2.plusSlides(1)">&#10095;</a>
-
-            <div class="dot-container" style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
-    </div>
-    <div id="content">
-        <h1 style="text-align: center;">Premios y reconocimientos</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
-            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
-        <div class="slideshow-container" id="carrusel3">
-            <!-- Imágenes del carrusel 2 -->
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/icon.png" style="width:50%">
+        <div id="content">
+            <h1 style="text-align: center;">Premios y reconocimientos</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
+                ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+            <div class="slideshow-container">
+                <div class="carousel" id="carousel3">
+                    <div class="slides" id="slides3">
+                        <img src="img/beta.png" alt="Image 7">
+                        <img src="img/debug.png" alt="Image 8">
+                        <img src="img/icon.png" alt="Image 9">
+                    </div>
                 </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/beta.png" style="width:50%">
-                </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="img-container">
-                    <img src="img/debug.png" style="width:50%">
-                </div>
-            </div>
-
-            <!-- Botones para cambiar de imagen -->
-            <a class="prev" onclick="carrusel2.plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="carrusel2.plusSlides(1)">&#10095;</a>
-
-            <div class="dot-container" style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
-    </div>
-    <div id="content">
-        <img style="display: block; margin: auto; width: 50%;" src="img/sponsor.png" alt="sponsor">
-    </div>
-    <script>
-        var carrusel1 = (function () {
-            var slideIndex = 1;
-            showSlides(slideIndex, 'carrusel1');
+        <div id="content">
+            <img style="display: block; margin: auto; width: 50%;" src="img/sponsor.png" alt="sponsor">
+        </div>
+        <script>
+            // Carrusel 1
+            const carousel1 = document.getElementById('carousel1');
+            const slides1 = document.getElementById('slides1');
+            let isDragging1 = false;
+            let startX1;
+            let scrollLeft1;
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n, 'carrusel1');
-            }
+            carousel1.addEventListener('touchstart', (e) => {
+                isDragging1 = true;
+                startX1 = e.touches[0].clientX - carousel1.offsetLeft;
+                scrollLeft1 = carousel1.scrollLeft;
+            });
 
-            function currentSlide(n) {
-                showSlides(slideIndex = n, 'carrusel1');
-            }
+            carousel1.addEventListener('touchend', () => {
+                isDragging1 = false;
+            });
 
-            function showSlides(n, carruselId) {
-                var i;
-                var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
-                var dots = document.getElementById(carruselId).getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
+            carousel1.addEventListener('touchmove', (e) => {
+                if (!isDragging1) return;
+                const x = e.touches[0].clientX - carousel1.offsetLeft;
+                const walk = (x - startX1) * 3;
+                carousel1.scrollLeft = scrollLeft1 - walk;
+            });
 
-            }
+            // Carrusel 2
+            const carousel2 = document.getElementById('carousel2');
+            const slides2 = document.getElementById('slides2');
+            let isDragging2 = false;
+            let startX2;
+            let scrollLeft2;
 
-            return {
-                plusSlides: plusSlides,
-                currentSlide: currentSlide
-            };
-        })();
+            carousel2.addEventListener('touchstart', (e) => {
+                isDragging2 = true;
+                startX2 = e.touches[0].clientX - carousel2.offsetLeft;
+                scrollLeft2 = carousel2.scrollLeft;
+            });
 
-        var carrusel2 = (function () {
-            var slideIndex = 1;
-            showSlides(slideIndex, 'carrusel2');
+            carousel2.addEventListener('touchend', () => {
+                isDragging2 = false;
+            });
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n, 'carrusel2');
-            }
+            carousel2.addEventListener('touchmove', (e) => {
+                if (!isDragging2) return;
+                const x = e.touches[0].clientX - carousel2.offsetLeft;
+                const walk = (x - startX2) * 3;
+                carousel2.scrollLeft = scrollLeft2 - walk;
+            });
 
-            function currentSlide(n) {
-                showSlides(slideIndex = n, 'carrusel2');
-            }
+            // Carrusel 3
+            const carousel3 = document.getElementById('carousel3');
+            const slides3 = document.getElementById('slides3');
+            let isDragging3 = false;
+            let startX3;
+            let scrollLeft3;
 
-            function showSlides(n, carruselId) {
-                var i;
-                var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
-                var dots = document.getElementById(carruselId).getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-            }
-            
+            carousel3.addEventListener('touchstart', (e) => {
+                isDragging3 = true;
+                startX3 = e.touches[0].clientX - carousel3.offsetLeft;
+                scrollLeft3 = carousel3.scrollLeft;
+            });
 
-            return {
-                plusSlides: plusSlides,
-                currentSlide: currentSlide
-            };
-        })();
+            carousel3.addEventListener('touchend', () => {
+                isDragging3 = false;
+            });
 
-        var carrusel3 = (function () {
-            var slideIndex = 1;
-            showSlides(slideIndex, 'carrusel3');
+            carousel3.addEventListener('touchmove', (e) => {
+                if (!isDragging3) return;
+                const x = e.touches[0].clientX - carousel3.offsetLeft;
+                const walk = (x - startX3) * 3;
+                carousel3.scrollLeft = scrollLeft3 - walk;
+            });
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n, 'carrusel3');
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n, 'carrusel3');
-            }
-
-            function showSlides(n, carruselId) {
-                var i;
-                var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
-                var dots = document.getElementById(carruselId).getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].className += " active";
-            }
-            
-
-            return {
-                plusSlides: plusSlides,
-                currentSlide: currentSlide
-            };
-        })();
-    </script>
+        </script>
 </body>
 
 </html>
