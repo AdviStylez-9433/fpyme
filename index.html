@@ -294,6 +294,7 @@
                 if (correo === '') {
                 }
             }
+
             const carousel = document.getElementById('carousel');
             const slides = document.getElementById('slides');
             let isDragging = false;
@@ -302,7 +303,7 @@
 
             carousel.addEventListener('touchstart', (e) => {
                 isDragging = true;
-                startX = e.touches[0].clientX - carousel.offsetLeft;
+                startX = e.touches[0].clientX;
                 scrollLeft = carousel.scrollLeft;
             });
 
@@ -312,8 +313,8 @@
 
             carousel.addEventListener('touchmove', (e) => {
                 if (!isDragging) return;
-                const x = e.touches[0].clientX - carousel.offsetLeft;
-                const walk = (x - startX) * 3;
+                const x = e.touches[0].clientX;
+                const walk = (x - startX) * 3; // Ajusta este valor según lo rápido que desees que se desplace el carrusel
                 carousel.scrollLeft = scrollLeft - walk;
             });
 
