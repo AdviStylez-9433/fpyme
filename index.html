@@ -52,11 +52,16 @@
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
+            gap: 10px;
+            /* Espacio entre las imágenes */
         }
 
         .carousel-images img {
             width: 100%;
+            /* Todas las imágenes ocuparán el 100% del espacio disponible */
             height: auto;
+            object-fit: cover;
+            /* Ajusta la imagen para llenar el espacio sin deformarla */
         }
 
         .prev,
@@ -265,9 +270,9 @@
         <div class="slideshow-container">
             <div class="carousel">
                 <div class="carousel-images">
-                    <img src="img/beta.png" alt="Image 1" style="width: 50%; height: 50%;">
-                    <img src="img/debug.png" alt="Image 2" style="width: 50%; height: 50%;">
-                    <img src="img/icon.png" alt="Image 3" style="width: 50%; height: 50%;">
+                    <img src="img/galery1.jpg" alt="Image 1">
+                    <img src="img/galery2.jpg" alt="Image 2">
+                    <img src="img/galery3.jpg" alt="Image 3">
                     <!-- Agrega más imágenes según sea necesario -->
                 </div>
             </div>
