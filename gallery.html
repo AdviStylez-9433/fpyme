@@ -28,6 +28,24 @@
             transition: margin-left 0.5s;
         }
 
+        .carousel {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 15px;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         #content.img {
             margin: 0 auto;
         }
@@ -123,115 +141,59 @@
 
 <body>
     <div id="content">
-        <h1 style="text-align: center;">Nuestro equipo</h1>
+        <h1 style="text-align: center;">Galeria de imagenes</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
+            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
             ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
-        <div class="carousel" id="carousel1">
-            <div class="slides" id="slides1">
-                <img src="img/beta.png" alt="Image 1" style="width: 50%; height: 50%;">
-                <img src="img/debug.png" alt="Image 2" style="width: 50%; height: 50%;">
-                <img src="img/icon.png" alt="Image 3" style="width: 50%; height: 50%;">
+
+        <div class="carousel" id="carousel">
+            <div class="slides" id="slides">
+                <img src="img/galery1.avif" alt="Image 1">
+                <img src="img/galery2.avif" alt="Image 2">
+                <img src="img/galery3.avif" alt="Image 3">
+                <img src="img/galery4.avif" alt="Image 4">
+                <img src="img/galery5.avif" alt="Image 5">
+                <img src="img/galery6.avif" alt="Image 6">
+                <img src="img/galery7.avif" alt="Image 7">
+            </div>
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
             </div>
         </div>
     </div>
     <div id="content">
-        <h1 style="text-align: center;">Eventos importantes</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
-            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
-        <div class="carousel" id="carousel2">
-            <div class="slides" id="slides2">
-                <img src="img/beta.png" alt="Image 4" style="width: 50%; height: 50%;">
-                <img src="img/debug.png" alt="Image 5" style="width: 50%; height: 50%;">
-                <img src="img/icon.png" alt="Image 6" style="width: 50%; height: 50%;">
-            </div>
-        </div>
+        <img style="display: block; margin: auto; width: 200px;" src="img/sponsor.png" alt="sponsor">
     </div>
-    <div id="content">
-        <h1 style="text-align: center;">Premios y reconocimientos</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
-            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
-        <div class="carousel" id="carousel3">
-            <div class="slides" id="slides3">
-                <img src="img/beta.png" alt="Image 7" style="width: 50%; height: 50%;">
-                <img src="img/debug.png" alt="Image 8" style="width: 50%; height: 50%;">
-                <img src="img/icon.png" alt="Image 9" style="width: 50%; height: 50%;">
-            </div>
-        </div>
-    </div>
-    <div id="content">
-        <img style="display: block; margin: auto; width: 50%;" src="img/sponsor.png" alt="sponsor">
-    </div>
+
     <script>
-        // Carrusel 1
-        const carousel1 = document.getElementById('carousel1');
-        const slides1 = document.getElementById('slides1');
-        let isDragging1 = false;
-        let startX1;
-        let scrollLeft1;
 
-        carousel1.addEventListener('touchstart', (e) => {
-            isDragging1 = true;
-            startX1 = e.touches[0].clientX - carousel1.offsetLeft;
-            scrollLeft1 = carousel1.scrollLeft;
+        const carousel = document.getElementById('carousel');
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            scrollLeft = carousel.scrollLeft;
         });
 
-        carousel1.addEventListener('touchend', () => {
-            isDragging1 = false;
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
         });
 
-        carousel1.addEventListener('touchmove', (e) => {
-            if (!isDragging1) return;
-            const x = e.touches[0].clientX - carousel1.offsetLeft;
-            const walk = (x - startX1) * 3;
-            carousel1.scrollLeft = scrollLeft1 - walk;
-        });
-
-        // Carrusel 2
-        const carousel2 = document.getElementById('carousel2');
-        const slides2 = document.getElementById('slides2');
-        let isDragging2 = false;
-        let startX2;
-        let scrollLeft2;
-
-        carousel2.addEventListener('touchstart', (e) => {
-            isDragging2 = true;
-            startX2 = e.touches[0].clientX - carousel2.offsetLeft;
-            scrollLeft2 = carousel2.scrollLeft;
-        });
-
-        carousel2.addEventListener('touchend', () => {
-            isDragging2 = false;
-        });
-
-        carousel2.addEventListener('touchmove', (e) => {
-            if (!isDragging2) return;
-            const x = e.touches[0].clientX - carousel2.offsetLeft;
-            const walk = (x - startX2) * 3;
-            carousel2.scrollLeft = scrollLeft2 - walk;
-        });
-
-        // Carrusel 3
-        const carousel3 = document.getElementById('carousel3');
-        const slides3 = document.getElementById('slides3');
-        let isDragging3 = false;
-        let startX3;
-        let scrollLeft3;
-
-        carousel3.addEventListener('touchstart', (e) => {
-            isDragging3 = true;
-            startX3 = e.touches[0].clientX - carousel3.offsetLeft;
-            scrollLeft3 = carousel3.scrollLeft;
-        });
-
-        carousel3.addEventListener('touchend', () => {
-            isDragging3 = false;
-        });
-
-        carousel3.addEventListener('touchmove', (e) => {
-            if (!isDragging3) return;
-            const x = e.touches[0].clientX - carousel3.offsetLeft;
-            const walk = (x - startX3) * 3;
-            carousel3.scrollLeft = scrollLeft3 - walk;
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel.scrollLeft = scrollLeft - walk;
         });
 
     </script>
