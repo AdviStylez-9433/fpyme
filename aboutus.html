@@ -183,7 +183,7 @@
         <p>Aqui tienes una seccion donde puedes personalizar la historia de tu empresa, adpatala a tu gusto y dale un
             toque diferente.</p>
         <div class="slideshow-container">
-            <div class="carousel" id="carousel">
+            <div class="carousel" id="carousel1">
                 <div class="slides" id="slides">
                     <img src="img/galery4.avif" alt="Image 1">
                     <img src="img/galery5.avif" alt="Image 2">
@@ -194,10 +194,11 @@
                 <span class="dot" onclick="currentSlide(2)"></span>
             </div>
         </div>
-        <h1 style="text-align: center;">En proceso de transformacion</h1>
-        <p>Este proyecto es una iniciativa de la Red de Asistencia Digital Fortalece Pyme Ñuble y todo su equipo en nuestro proceso de transformacion digital.</p>
+        <h1 style="text-align: center;">Transformacion digital</h1>
+        <p>Este proyecto es una iniciativa de la Red de Asistencia Digital Fortalece Pyme Ñuble y todo su equipo en
+            nuestro proceso de transformacion digital.</p>
         <div class="slideshow-container">
-            <div class="carousel" id="carousel">
+            <div class="carousel" id="carousel2">
                 <div class="slides" id="slides">
                     <img src="img/galery2.avif" alt="Image 1">
                     <img src="img/galery3.avif" alt="Image 2">
@@ -271,26 +272,45 @@
             }
         }
 
-        const carousel = document.getElementById('carousel');
-        let isDragging = false;
-        let startX;
-        let scrollLeft;
+        const carousel1 = document.getElementById('carousel1');
+        const carousel2 = document.getElementById('carousel2');
+        let isDragging1 = false;
+        let isDragging2 = false;
+        let startX1, startX2;
+        let scrollLeft1, scrollLeft2;
 
-        carousel.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].clientX;
-            scrollLeft = carousel.scrollLeft;
+        carousel1.addEventListener('touchstart', (e) => {
+            isDragging1 = true;
+            startX1 = e.touches[0].clientX;
+            scrollLeft1 = carousel1.scrollLeft;
         });
 
-        carousel.addEventListener('touchend', () => {
-            isDragging = false;
+        carousel1.addEventListener('touchend', () => {
+            isDragging1 = false;
         });
 
-        carousel.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
+        carousel1.addEventListener('touchmove', (e) => {
+            if (!isDragging1) return;
             const x = e.touches[0].clientX;
-            const walk = (x - startX) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
-            carousel.scrollLeft = scrollLeft - walk;
+            const walk = (x - startX1) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel1.scrollLeft = scrollLeft1 - walk;
+        });
+
+        carousel2.addEventListener('touchstart', (e) => {
+            isDragging2 = true;
+            startX2 = e.touches[0].clientX;
+            scrollLeft2 = carousel2.scrollLeft;
+        });
+
+        carousel2.addEventListener('touchend', () => {
+            isDragging2 = false;
+        });
+
+        carousel2.addEventListener('touchmove', (e) => {
+            if (!isDragging2) return;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX2) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel2.scrollLeft = scrollLeft2 - walk;
         });
 
     </script>
