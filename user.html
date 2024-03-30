@@ -14,7 +14,7 @@
 
     #actionButton {
       float: right;
-      background-color: #3ddc84;
+      background-color: #2cd9b7;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -103,6 +103,22 @@
       text-align: left;
       margin-bottom: 10px;
     }
+
+    a {
+      text-decoration: none;
+    }
+
+    a.sin-subrayado {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #2cd9b7;
+    }
+
+    a:link {
+      color: #2cd9b7;
+    }
   </style>
 </head>
 
@@ -112,7 +128,7 @@
       <h1>Mi perfil</h1>
 
       <label for="foto_perfil">Foto de perfil:</label>
-      <img src="img/user.png" alt="perfil">
+      <img src="img/user2.png" alt="perfil">
       <input type="file" id="foto_perfil" name="foto_perfil"><br>
 
       <label for="username">Nombre de usuario:</label>
@@ -128,12 +144,13 @@
       <div class="strength-label" id="strengthLabel"></div>
 
       <button id="actionButton" onclick="message()">Guardar</button>
+      <br><a href="login.html">Cerrar sesion</a>
 
     </form>
   </div>
   <div id="content">
     <img style="display: block; margin: auto; width: 300px;" src="img/footermain.png" alt="sponsor">
-</div>
+  </div>
 
 
   <script>
