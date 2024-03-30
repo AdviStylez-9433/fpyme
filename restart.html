@@ -14,7 +14,7 @@
 
         #actionButton {
             float: right;
-            background-color: #2cd9b7;
+            background-color: #007FFF;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -99,6 +99,7 @@
             font-weight: bold;
             text-align: right;
             max-width: 100%;
+            transition: width 0.5s ease;
         }
 
         .strength-weak {
@@ -111,6 +112,21 @@
 
         .strength-strong {
             background-color: #06d6a0;
+        }
+
+        .strength-weak .strength-bar {
+            width: 33.33%;
+            /* Ajusta este valor según el nivel de fortaleza */
+        }
+
+        .strength-medium .strength-bar {
+            width: 66.67%;
+            /* Ajusta este valor según el nivel de fortaleza */
+        }
+
+        .strength-strong .strength-bar {
+            width: 100%;
+            /* Ajusta este valor según el nivel de fortaleza */
         }
 
         .strength-label {
