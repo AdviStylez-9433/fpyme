@@ -158,15 +158,50 @@
 <body>
     <div id="content">
         <h1 style="text-align: center;">Galeria de imagenes</h1>
-        <p>Esta es tu galeria completamente animada, llenala de imagenes y fotografias que caracterizen tu empresa y le dan su identidad para que la compartas con tus clientes.</p>
+        <p>Esta es tu galeria completamente animada, llenala de imagenes y fotografias que caracterizen tu empresa y le
+            dan su identidad para que la compartas con tus clientes.</p>
 
-        <div class="carousel" id="carousel">
+        <div class="carousel" id="carousel1">
             <div class="slides" id="slides">
                 <img src="img/galery1.avif" alt="Image 1">
                 <img src="img/galery2.avif" alt="Image 2">
                 <img src="img/galery3.avif" alt="Image 3">
                 <img src="img/galery4.avif" alt="Image 4">
                 <img src="img/galery5.avif" alt="Image 5">
+            </div>
+        </div>
+        <div class="dot-container" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <div class="carousel" id="carousel2">
+            <div class="slides" id="slides">
+                <img src="img/galery3.avif" alt="Image 3">
+                <img src="img/galery1.avif" alt="Image 1">
+                <img src="img/galery4.avif" alt="Image 4">
+                <img src="img/galery2.avif" alt="Image 2">
+                <img src="img/galery5.avif" alt="Image 5">
+            </div>
+        </div>
+        <div class="dot-container" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <div class="carousel" id="carousel3">
+            <div class="slides" id="slides">
+                <img src="img/galery5.avif" alt="Image 5">
+                <img src="img/galery4.avif" alt="Image 4">
+                <img src="img/galery3.avif" alt="Image 3">
+                <img src="img/galery2.avif" alt="Image 2">
+                <img src="img/galery1.avif" alt="Image 1">                
             </div>
         </div>
         <div class="dot-container" style="text-align:center">
@@ -183,27 +218,66 @@
 
     <script>
 
-        const carousel = document.getElementById('carousel');
-        let isDragging = false;
-        let startX;
-        let scrollLeft;
+        const carousel1 = document.getElementById('carousel1');
+        const carousel2 = document.getElementById('carousel2');
+        const carousel3 = document.getElementById('carousel3');
+        let isDragging1 = false;
+        let isDragging2 = false;
+        let isDragging3 = false;
+        let startX1, startX2, startX3;
+        let scrollLeft1, scrollLeft2, scrollLeft3;
 
-        carousel.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].clientX;
-            scrollLeft = carousel.scrollLeft;
+        carousel1.addEventListener('touchstart', (e) => {
+            isDragging1 = true;
+            startX1 = e.touches[0].clientX;
+            scrollLeft1 = carousel1.scrollLeft;
         });
 
-        carousel.addEventListener('touchend', () => {
-            isDragging = false;
+        carousel1.addEventListener('touchend', () => {
+            isDragging1 = false;
         });
 
-        carousel.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
+        carousel1.addEventListener('touchmove', (e) => {
+            if (!isDragging1) return;
             const x = e.touches[0].clientX;
-            const walk = (x - startX) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
-            carousel.scrollLeft = scrollLeft - walk;
+            const walk = (x - startX1) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel1.scrollLeft = scrollLeft1 - walk;
         });
+
+        carousel2.addEventListener('touchstart', (e) => {
+            isDragging2 = true;
+            startX2 = e.touches[0].clientX;
+            scrollLeft2 = carousel2.scrollLeft;
+        });
+
+        carousel2.addEventListener('touchend', () => {
+            isDragging2 = false;
+        });
+
+        carousel2.addEventListener('touchmove', (e) => {
+            if (!isDragging2) return;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX2) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel2.scrollLeft = scrollLeft2 - walk;
+        });
+
+        carousel3.addEventListener('touchstart', (e) => {
+            isDragging3 = true;
+            startX3 = e.touches[0].clientX;
+            scrollLeft3 = carousel3.scrollLeft;
+        });
+
+        carousel3.addEventListener('touchend', () => {
+            isDragging3 = false;
+        });
+
+        carousel3.addEventListener('touchmove', (e) => {
+            if (!isDragging3) return;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX3) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel3.scrollLeft = scrollLeft3 - walk;
+        });
+
 
     </script>
 </body>
