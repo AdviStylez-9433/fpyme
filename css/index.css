@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#actionButton {
+    float: right;
+    background-color: #633ae5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font: Arial;
+    font-size: 20px;
+}
+
+#content {
+    padding: 20px;
+    transition: margin-left 0.5s;
+}
+
+#content.img {
+    margin: 0 auto;
+}
+
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 15px;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px 3px 3px 3px;
+    background-color: #088475;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #088475;
+}
+
+/* Estilos para los puntos */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Estilos para las imágenes */
+.img-container {
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Estilos para las noticias */
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.noticia {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.noticia h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.noticia p {
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.sin-subrayado {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #633ae5;
+}
+
+a:link {
+    color: #633ae5;
+}
+
+/*Estilos sponsors*/
+#sponsors {
+    padding: 20px;
+    background-color: white;
+}
+
+.sponsor {
+    display: block;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.sponsor img {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /* Centrar horizontalmente la imagen */
+}
+
+/* Estilos para la sección de suscripción */
+#suscripcion {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#suscripcion h2 {
+    margin-bottom: 20px;
+}
+
+#suscripcion input[type="email"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#suscripcion button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#suscripcion button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    display: block;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    padding: 13px;
+    margin-bottom: 13px;
+}
+
+header {
+    background-color: #633ae5;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 40px;
+}
+
+.btn-menu label{
+    cursor: pointer;
+}
+
+#btn-menu{
+    display: none;
+}
+
+.container-menu{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.cont-menu{
+    width: 100%;
+    max-width: 200px;
+    background-color: #633ae5;
+    height: 100vh;
+    position: relative;
+    transition: all 0.5 ease;
+}
+
+.cont-menu nav{
+transform: translateY(15%);
+}
+
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-left: 5px solid transparent;   
+    transition: all 0.5s ease; 
+}
+
+.cont-menu nav a:active{
+    background-color: #4726b4;
+    border-left: #734cf5 solid 5px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.perfil button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
