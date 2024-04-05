@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #efeded;
 }
 
 #actionButton {
@@ -18,6 +19,10 @@ body {
 #content {
     padding: 20px;
     transition: margin-left 0.5s;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    margin: 0 20px;
 }
 
 #content.img {
@@ -43,7 +48,7 @@ body {
 .slides {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 15px;
+    gap: 20px;
 }
 
 .slides img {
