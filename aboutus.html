@@ -5,72 +5,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quienes somos</title>
-    <link rel="stylesheet" href="css/aboutus.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #actionButton {
+            float: right;
+            background-color: #008476;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font: Arial;
+            font-size: 20px;
+        }
+
+        #content {
+            padding: 20px;
+            transition: margin-left 0.5s;
+        }
+
+        #content.img {
+            margin: 0 auto;
+        }
+
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px 3px 3px 3px;
+            background-color: #088475;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 3px 3px 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #088475;
+        }
+
+        /* Estilos para los puntos */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Estilos para las imágenes */
+        .img-container {
+            text-align: center;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        /* Estilos para las noticias */
+        .noticias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .noticia {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .noticia h2 {
+            color: #333;
+            font-size: 1.5em;
+        }
+
+        .noticia p {
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.sin-subrayado {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #008476;
+        }
+
+        a:link {
+            color: #008476;
+        }
+    </style>
 </head>
 
 <body>
 
     <div id="content">
         <h1 style="text-align: center;">Nuestra historia</h1>
-        <p>Aqui tienes una seccion donde puedes personalizar la historia de tu empresa, adpatala a tu gusto y dale un
-            toque diferente.</p>
-        <div class="slideshow-container">
-            <div class="carousel" id="carousel1">
-                <div class="slides" id="slides">
-                    <img src="img/gallery4.jpeg" alt="Image 1">
-                    <img src="img/gallery5.jpg" alt="Image 2">
-                </div>
-            </div>
-            <div class="dot-container" style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-            </div>
-        </div>
-        <h1 style="text-align: center;">Transformacion digital</h1>
-        <p>Este proyecto es una iniciativa de la Red de Asistencia Digital Fortalece Pyme Ñuble y todo su equipo en
-            nuestro proceso de transformacion digital.</p>
-        <div class="slideshow-container">
-            <div class="carousel" id="carousel2">
-                <div class="slides" id="slides">
-                    <img src="img/gallery6.jpg" alt="Image 1">
-                    <img src="img/gallery7.png" alt="Image 2">
-                </div>
-            </div>
-            <div class="dot-container" style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
+            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+        <div class="carousel" id="carousel">
+            <div class="slides" id="slides">
+                <img src="img/beta.png" alt="Image 1" style="width: 50%; height: 50%;">
+                <img src="img/debug.png" alt="Image 2" style="width: 50%; height: 50%;">
+                <img src="img/icon.png" alt="Image 3" style="width: 50%; height: 50%;">
             </div>
         </div>
     </div>
     <div id="content">
         <h1 style="text-align: center;">Novedades</h1>
-        <p>Esta seccion es exclusiva para que coloques tus logros y reconocimientos, muestralos a tu publico destacando
-            los valores de tu empresa</p>
-        <div class="noticias">
-            <!-- Noticia 1 -->
-            <div class="noticia">
-                <h3>"Robots que aprenden por sí mismos: Avance revolucionario en Inteligencia Artificial"</h3>
-                <p>Investigadores en inteligencia artificial han logrado un avance significativo al desarrollar
-                    algoritmos que permiten a los robots aprender habilidades complejas de forma autónoma.</p>
-                <img src="img/news1.jpeg" alt="image 1"
-                    style="display: block; margin: auto; width: 300px; height: 200px;">
-            </div>
-            <!-- Puedes agregar más noticias aquí -->
-            <div class="noticia">
-                <h3>"Bloqueando intrusos: Nuevo sistema Blockchain defiende tu privacidad en la red"</h3>
-                <p>Este sistema utiliza una combinación de criptografía avanzada y registros descentralizados para
-                    proteger los datos de los usuarios y prevenir el acceso no autorizado a la información personal.</p>
-                <img src="img/news2.jpg" alt="image2"
-                    style="display: block; margin: auto; width: 300px; height: 190px;">
-            </div>
-            <div class="noticia">
-                <h3>"Hackers utilizan inteligencia artificial para perpetrar ataques cibernéticos más sofisticados"</h3>
-                <p>Expertos en ciberseguridad han advertido sobre una nueva tendencia preocupante: hackers que emplean
-                    inteligencia artificial para llevar a cabo ataques cibernéticos más sofisticados y difíciles de
-                    detectar.</p>
-                <img src="img/news3.jpg" alt="image2"
-                    style="display: block; margin: auto; width: 300px; height: 190px;">
-            </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit.
+            Suspendisse
+            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+        <div class="noticia">
+            <h3>Titular de la noticia 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
+                ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+            <a href="news.html">Leer mas</a>
+        </div>
+        <div class="noticia">
+            <h3>Titular de la noticia 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
+                ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+            <a href="news.html">Leer mas</a>
         </div>
         <!-- Imágenes del carrusel -->
 
@@ -79,9 +197,10 @@
     <div id="content">
         <h1 style="text-align: center;">Encuentranos en Maps</h1>
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.8480806941984!2d-72.11200162417059!3d-36.605967772303096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9668d72dd3646201%3A0xfb6f95074bb0cede!2sFortalece%20Pyme%20%C3%91uble!5e0!3m2!1ses!2scl!4v1711726890007!5m2!1ses!2scl"
-            width="90%" height="350px" style="border:0; display: block; margin: auto;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304919.114799211!2d-74.49075388010337!3d-36.00905707090954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9669290073c9503f%3A0x1352b942e5eb9206!2sParque%20del%20papu%20%3Av!5e0!3m2!1ses!2scl!4v1710898874298!5m2!1ses!2scl"
+            width="300" height="300" style="border:0; margin: auto; display: block;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+        <br><a href="https://maps.app.goo.gl/MLoE9Qq8dajB4HPZ6">Ver en Maps</a>
     </div>
     <div id="content">
         <h1 style="text-align: center;">Reserva tu cita</h1>
@@ -90,10 +209,11 @@
             src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1i4SpqQY1zzMjvyRS6FFFJHJvj5RDtLt-aYaZ2n0qjRk2QGNosH6hg6lbvg8KXZ2DuVOfDHgaS?gv=true"
             style="border: 0" width="100%" height="600" frameborder="0"></iframe><br>
         <!-- end Google Calendar Appointment Scheduling -->
+        <br><a href="https://calendar.app.google/pjZ92Ue3tDaCViTWA">Ver en Calendar</a>
     </div>
 
     <div id="content">
-        <img style="display: block; margin: auto; width: 300px;" src="img/footermain.png" alt="sponsor">
+        <img style="display: block; margin: auto; width: 50%;" src="img/sponsor.png" alt="sponsor">
     </div>
 
     <script>
@@ -103,46 +223,27 @@
             if (correo === '') {
             }
         }
+        const carousel = document.getElementById('carousel');
+        const slides = document.getElementById('slides');
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
 
-        const carousel1 = document.getElementById('carousel1');
-        const carousel2 = document.getElementById('carousel2');
-        let isDragging1 = false;
-        let isDragging2 = false;
-        let startX1, startX2;
-        let scrollLeft1, scrollLeft2;
-
-        carousel1.addEventListener('touchstart', (e) => {
-            isDragging1 = true;
-            startX1 = e.touches[0].clientX;
-            scrollLeft1 = carousel1.scrollLeft;
+        carousel.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
         });
 
-        carousel1.addEventListener('touchend', () => {
-            isDragging1 = false;
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
         });
 
-        carousel1.addEventListener('touchmove', (e) => {
-            if (!isDragging1) return;
-            const x = e.touches[0].clientX;
-            const walk = (x - startX1) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
-            carousel1.scrollLeft = scrollLeft1 - walk;
-        });
-
-        carousel2.addEventListener('touchstart', (e) => {
-            isDragging2 = true;
-            startX2 = e.touches[0].clientX;
-            scrollLeft2 = carousel2.scrollLeft;
-        });
-
-        carousel2.addEventListener('touchend', () => {
-            isDragging2 = false;
-        });
-
-        carousel2.addEventListener('touchmove', (e) => {
-            if (!isDragging2) return;
-            const x = e.touches[0].clientX;
-            const walk = (x - startX2) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
-            carousel2.scrollLeft = scrollLeft2 - walk;
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].clientX - carousel.offsetLeft;
+            const walk = (x - startX) * 3;
+            carousel.scrollLeft = scrollLeft - walk;
         });
 
     </script>

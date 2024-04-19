@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/aplicacion.js"></script>
+    <title>Sucursales</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #actionButton {
+            float: right;
+            background-color: #008476;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font: Arial;
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #content {
+            margin-top: 80px;
+            padding: 20px;
+            transition: margin-left 0.5s;
+        }
+
+        #sucursales {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            column-count: 1;
+            column-gap: 20px;
+        }
+
+        #sucursales h2 {
+            text-align: center;
+        }
+
+        .sucursal {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            width: 300px;
+        }
+
+        #iframeContainer {
+            width: 250px;
+            /* Ancho del contenedor */
+            height: 250px;
+            /* Altura del contenedor */
+            border: 1px solid #ccc;
+            /* Borde del contenedor */
+            padding: 10px;
+            /* Espacio interior del contenedor */
+            margin: 20px auto;
+            /* Margen externo del contenedor (centrado horizontalmente) */
+            overflow: hidden;
+            /* Oculta el contenido que se desborda del contenedor */
+            border-radius: 8px;
+            /* Borde redondeado del contenedor */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Sombra del contenedor */
+        }
+
+        #iframeContainer iframe {
+            width: 100%;
+            /* Ancho completo del iframe dentro del contenedor */
+            height: 100%;
+            /* Altura completa del iframe dentro del contenedor */
+            border: none;
+            /* Sin borde para el iframe */
+        }
+
+        #menuSuperior {
+            background-color: white;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        #searchInput {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 30%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px 3px 3px 3px;
+            background-color: #088475;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 3px 3px 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: #088475;
+        }
+
+        /* Estilos para los puntos */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Estilos para las imágenes */
+        .img-container {
+            text-align: center;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sucursales">
+        <h1>Locales y oficinas</h1>
+        <div id="menuSuperior">
+            <input type="text" id="searchInput" placeholder="Buscar sucursales...">
+        </div>
+        <div class="sucursal">
+            <h2>Sucursal 1</h2>
+            <div class="slideshow-container" id="carrusel1">
+                <!-- Imágenes del carrusel 1 -->
+                <div class="mySlides">
+                    <div class="img-container">
+                        <img src="img/icon.png" style="width:50%">
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="img-container">
+                        <img src="img/beta.png" style="width:50%">
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="img-container">
+                        <img src="img/debug.png" style="width:50%">
+                    </div>
+                </div>
+
+                <!-- Botones para cambiar de imagen -->
+                <a class="prev" onclick="carrusel1.plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="carrusel1.plusSlides(1)">&#10095;</a>
+
+                <div class="dot-container" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <p>Dirección de la sucursal 1</p>
+            <p>Teléfono de la sucursal 1</p>
+            <button id="actionButton">Agendar cita</button>
+        </div>
+        <!-- Agrega más sucursales según sea necesario -->
+
+        <div class="sucursal">
+            <h2>Sucursal 2</h2>
+            <div class="slideshow-container" id="carrusel2">
+                <!-- Imágenes del carrusel 2 -->
+                <div class="mySlides">
+                    <div class="img-container">
+                        <img src="img/icon.png" style="width:50%">
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="img-container">
+                        <img src="img/beta.png" style="width:50%">
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <div class="img-container">
+                        <img src="img/debug.png" style="width:50%">
+                    </div>
+                </div>
+
+                <!-- Botones para cambiar de imagen -->
+                <a class="prev" onclick="carrusel2.plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="carrusel2.plusSlides(1)">&#10095;</a>
+
+                <div class="dot-container" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <p>Dirección de la sucursal 2</p>
+            <p>Teléfono de la sucursal 2</p>
+            <button id="actionButton">Agendar cita</button>
+        </div>
+        <div id="content">
+            <img style="display: block; margin: auto; width: 50%;" src="img/sponsor.png" alt="sponsor">
+        </div>
+
+        <script>
+            var carrusel1 = (function () {
+                var slideIndex = 1;
+                showSlides(slideIndex, 'carrusel1');
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n, 'carrusel1');
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n, 'carrusel1');
+                }
+
+                function showSlides(n, carruselId) {
+                    var i;
+                    var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
+                    var dots = document.getElementById(carruselId).getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+
+                return {
+                    plusSlides: plusSlides,
+                    currentSlide: currentSlide
+                };
+            })();
+
+            var carrusel2 = (function () {
+                var slideIndex = 1;
+                showSlides(slideIndex, 'carrusel2');
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n, 'carrusel2');
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n, 'carrusel2');
+                }
+
+                function showSlides(n, carruselId) {
+                    var i;
+                    var slides = document.getElementById(carruselId).getElementsByClassName("mySlides");
+                    var dots = document.getElementById(carruselId).getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+
+                return {
+                    plusSlides: plusSlides,
+                    currentSlide: currentSlide
+                };
+            })();
+
+            // Obtener el elemento de entrada de texto
+            const input = document.getElementById('searchInput');
+
+            // Agregar un evento de escucha para el evento 'input'
+            input.addEventListener('input', function () {
+                // Obtener el valor actual del campo de entrada
+                const valorBusqueda = input.value.toLowerCase();
+
+                // Obtener todos los elementos que deseas filtrar (por ejemplo, los productos)
+                const elementos = document.querySelectorAll('.sucursal');
+
+                // Iterar sobre los elementos y ocultar/mostrar según la búsqueda
+                elementos.forEach(function (elemento) {
+                    // Obtener el texto del elemento a filtrar
+                    const textoElemento = elemento.textContent.toLowerCase();
+
+                    // Mostrar u ocultar el elemento según la coincidencia con la búsqueda
+                    if (textoElemento.includes(valorBusqueda)) {
+                        elemento.style.display = 'block'; // Mostrar el elemento
+                    } else {
+                        elemento.style.display = 'none'; // Ocultar el elemento
+                    }
+                });
+            });
+
+            //Script logica api
+            logicaAplicacion.sucursalActual = 0 // Misma vaina
+
+            for (let i = 0; i < logicaAplicacion.sucursales[logicaAplicacion.sucursalActual].locales.length; i++) {
+                var newOffice = document.createElement('div')
+                newOffice.className = 'sucursal'
+
+                var officeName = document.createElement('h2')
+                officeName.textContent = logicaAplicacion.sucursales[logicaAplicacion.sucursalActual].locales[i].nombre
+
+                var address = document.createElement('p')
+                address.textContent = logicaAplicacion.sucursales[logicaAplicacion.sucursalActual].locales[i].direccion
+
+                var phone = document.createElement('p')
+                phone.textContent = logicaAplicacion.sucursales[logicaAplicacion.sucursalActual].locales[i].telefono
+
+                var agregar = document.createElement('button')
+                agregar.textContent = 'Agendar cita'
+                agregar.setAttribute('id', 'actionButton')
+
+                newOffice.appendChild(officeName)
+                newOffice.appendChild(address)
+                newOffice.appendChild(phone)
+                newOffice.appendChild(agregar)
+                document.getElementById('sucursales').appendChild(newOffice)
+            }
+        </script>
+</body>
+
+</html>
