@@ -92,26 +92,26 @@
             window.location.href = "profile.html";
         }
 
-        const carousel = document.getElementById('carousel');
-        let isDragging = false;
-        let startX;
-        let scrollLeft;
+        const carousel1 = document.getElementById('carousel1');
+        let isDragging1 = false;
+        let startX1;
+        let scrollLeft1;
 
-        carousel.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].clientX;
-            scrollLeft = carousel.scrollLeft;
+        carousel1.addEventListener('touchstart', (e) => {
+            isDragging1 = true;
+            startX1 = e.touches[0].clientX;
+            scrollLeft1 = carousel1.scrollLeft;
         });
 
-        carousel.addEventListener('touchend', () => {
-            isDragging = false;
+        carousel1.addEventListener('touchend', () => {
+            isDragging1 = false;
         });
 
-        carousel.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
+        carousel1.addEventListener('touchmove', (e) => {
+            if (!isDragging1) return;
             const x = e.touches[0].clientX;
-            const walk = (x - startX) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
-            carousel.scrollLeft = scrollLeft - walk;
+            const walk = (x - startX1) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel1.scrollLeft = scrollLeft1 - walk;
         });
 
     </script>
