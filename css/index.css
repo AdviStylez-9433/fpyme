@@ -19,7 +19,7 @@ body {
 #content {
     padding: 20px;
     transition: margin-left 0.5s;
-    background-color: white;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
     border-radius: 10px; /* Agrega bordes redondeados */
     margin: 0 20px;
@@ -222,6 +222,7 @@ label {
 input {
     padding: 13px;
     margin-bottom: 13px;
+    width: 100px;
 }
 
 header {
