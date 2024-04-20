@@ -1,9 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
-
-#actionButton {
+    background-color: #efeded;
+  }
+  
+  #actionButton {
     float: right;
     background-color: #633ae5;
     color: white;
@@ -13,12 +14,16 @@ body {
     cursor: pointer;
     font: Arial;
     font-size: 20px;
-}
-
-#content {
+  }
+  
+  #content {
     padding: 20px;
     transition: margin-left 0.5s;
-}
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    margin: 0 20px;
+  }
 
 .carousel {
     width: 100%;
