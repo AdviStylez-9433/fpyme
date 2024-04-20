@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <br>
+    <div id="content">
+        <!-- Contenido de la página -->
+        <p>Hola, esta es tu app hecha solo con HTML 5</p>
+        <h1 style="text-align: center;">Bienvenido a MyApp</h1>
+        <p>Esta es una app de ejemplo echa 100% con HTML 5, puedes personalizar este contenido según tus
+            necesidades.</p>
+
+        <h2>¿Quienes somos?</h2>
+        <p>Esta una seccion editable para que la personalizes con la identidad de tu empresa.</p>
+        <img style="display: block; margin: auto; width: 300px;" src="img/logo.png" alt="foto"><br>
+        <a href="aboutus.html">Ir a...</a>
+    </div><br>
+
+    <br>
+    <div id="content">
+        <h2>Últimas novedades</h2>
+        <p>Esta una seccion con la ultimas noticias ocurridas en nuestra empresa y nuestro circulo.</p>
+        <div class="noticias">
+            <!-- Noticia 1 -->
+            <div class="noticia">
+                <h3>"Robots que aprenden por sí mismos: Avance revolucionario en Inteligencia Artificial"</h3>
+                <div class="slideshow-container">
+                    <div class="carousel" id="carousel">
+                        <div class="slides" id="slides">
+                            <img src="img/news1.jpeg" alt="image 1"
+                                style="display: block; margin: auto; width: 300px; height: 200px;">
+                        </div>
+                    </div>
+                </div>
+                <br><a href="aboutus.html">Leer mas...</a>
+            </div>
+        </div>
+    </div><br>
+
+    <br>
+    <div id="content">
+        <h2>Galeria de fotos</h2>
+        <p>Esta es una galeria de fotos con carrusel donde puedes poner imagenes de tu empresa o tu contenido.</p>
+        <div class="slideshow-container">
+            <div class="carousel" id="carousel">
+                <div class="slides" id="slides">
+                    <img src="img/gallery1.jpg" alt="Image 1">
+                    <img src="img/gallery2.jpeg" alt="Image 2">
+                    <img src="img/gallery3.jpg" alt="Image 3">
+                </div>
+            </div>
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <a href="gallery.html">Ver mas...</a>
+        </div>
+    </div><br>
+
+    <br>
+    <div id="content">
+        <h2>Suscribete y no te pierdas nada</h2>
+        <p>Con tu correo electrónico puedes recibir notificaciones de nuestra app o nuevas actualizaciones </p>
+        <form id="register-form" action="loader.html">
+            <input id="email" type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+            <button id="actionButton" onclick="subscription()">Enviar</button>
+            <label for="text">‎ </label>
+        </form>
+    </div><br>
+
+
+    <img style="display: block; margin: auto; width: 300px;" src="img/footers.png" alt="sponsor">
+
+
+    <script>
+        function subscription() {
+            const correo = document.getElementById('email').value;
+
+            if (correo === '') {
+            }
+        }
+
+        function redirect() {
+            window.location.href = "profile.html";
+        }
+
+        const carousel1 = document.getElementById('carousel1');
+        let isDragging1 = false;
+        let startX1;
+        let scrollLeft1;
+
+        carousel1.addEventListener('touchstart', (e) => {
+            isDragging1 = true;
+            startX1 = e.touches[0].clientX;
+            scrollLeft1 = carousel1.scrollLeft;
+        });
+
+        carousel1.addEventListener('touchend', () => {
+            isDragging1 = false;
+        });
+
+        carousel1.addEventListener('touchmove', (e) => {
+            if (!isDragging1) return;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX1) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel1.scrollLeft = scrollLeft1 - walk;
+        });
+
+    </script>
+</body>
+
+</html>
