@@ -5,318 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        #actionButton {
-            float: right;
-            background-color: #008476;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font: Arial;
-            font-size: 20px;
-        }
-
-        #content {
-            padding: 20px;
-            transition: margin-left 0.5s;
-        }
-
-        #content.img {
-            margin: 0 auto;
-        }
-
-        .slideshow-container {
-            max-width: 800px;
-            position: relative;
-            margin: auto;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .carousel {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .slides img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 3px 3px 3px 3px;
-            background-color: #088475;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 3px 3px 3px;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: #088475;
-        }
-
-        /* Estilos para los puntos */
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-            background: white;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active,
-        .dot:hover {
-            background-color: #717171;
-        }
-
-        /* Estilos para las imágenes */
-        .img-container {
-            text-align: center;
-        }
-
-        .img-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-
-        /* Estilos para las noticias */
-        .noticias {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .noticia {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-        }
-
-        .noticia h2 {
-            color: #333;
-            font-size: 1.5em;
-        }
-
-        .noticia p {
-            color: #666;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a.sin-subrayado {
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: #008476;
-        }
-
-        a:link {
-            color: #008476;
-        }
-
-        /*Estilos sponsors*/
-        #sponsors {
-            padding: 20px;
-            background-color: white;
-        }
-
-        .sponsor {
-            display: block;
-            margin-right: 20px;
-            text-align: center;
-        }
-
-        .sponsor img {
-            max-width: 100%;
-            height: 100%;
-            margin: 0 auto;
-            /* Centrar horizontalmente la imagen */
-        }
-
-        /* Estilos para la sección de suscripción */
-        #suscripcion {
-            padding: 20px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-
-        #suscripcion h2 {
-            margin-bottom: 20px;
-        }
-
-        #suscripcion input[type="email"] {
-            width: 200px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        #suscripcion button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        #suscripcion button:hover {
-            background-color: #0056b3;
-        }
-
-        form {
-            display: block;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        input {
-            padding: 13px;
-            margin-bottom: 13px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <div id="content">
+    <br><div id="content">
         <!-- Contenido de la página -->
-        <p>Hola, esta es mi página con una barra superior única.</p>
+        <p>Hola, esta es tu app hecha solo con HTML 5</p>
         <h1 style="text-align: center;">Bienvenido a MyApp</h1>
-        <p>Esta es una página de ejemplo con una barra superior única. Puedes personalizar este contenido según tus
+        <p>Esta es una app de ejemplo echa 100% con HTML 5, puedes personalizar este contenido según tus
             necesidades.</p>
 
         <h2>¿Quienes somos?</h2>
-        <p>Esta una seccion editable para que la personalizes segun tus necesidades</p>
-        <img style="display: block; margin: auto; " src="img/launcher.png" alt="foto"><br>
-        <a href="aboutus.html">Leer mas</a>
+        <p>Esta una seccion editable para que la personalizes con la identidad de tu empresa.</p>
+        <img style="display: block; margin: auto; width: 300px;" src="img/logo.png" alt="foto"><br>
+        <a href="aboutus.html">Ir a...</a>
+    </div><br>
 
-        <div class="container">
-            <h2>Últimas noticias</h2>
-            <p>Esta una seccion con la ultimas noticias ocurridas</p>
-            <div class="noticias">
-                <!-- Noticia 1 -->
-                <div class="noticia">
-                    <h3>Titular de la noticia 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
-                        ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
-                    <a href="news.html">Leer mas</a>
+    <br><div id="content">
+        <h2>Últimas novedades</h2>
+        <p>Esta una seccion con la ultimas noticias ocurridas en nuestra empresa y nuestro circulo.</p>
+        <div class="noticias">
+            <!-- Noticia 1 -->
+            <div class="noticia">
+                <h3>"Robots que aprenden por sí mismos: Avance revolucionario en Inteligencia Artificial"</h3>
+                <div class="slideshow-container">
+                    <div class="carousel" id="carousel">
+                        <div class="slides" id="slides">
+                            <img src="img/news1.jpeg" alt="image 1"
+                            style="display: block; margin: auto; width: 300px; height: 200px;">
+                        </div>
+                    </div>
                 </div>
-                <!-- Puedes agregar más noticias aquí -->
-                <div class="noticia">
-                    <h3>Titular de la noticia 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
-                        ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
-                    <a href="news.html">Leer mas</a>
-                </div>
+                <br><a href="aboutus.html">Leer mas...</a>
             </div>
         </div>
+    </div><br>
 
+    <br><div id="content">
         <h2>Galeria de fotos</h2>
-        <p>Esta es una galeria de fotos con carrusel</p>
+        <p>Esta es una galeria de fotos con carrusel donde puedes poner imagenes de tu empresa o tu contenido.</p>
         <div class="slideshow-container">
             <div class="carousel" id="carousel">
                 <div class="slides" id="slides">
-                    <img src="img/beta.png" alt="Image 1" style="width: 50%; height: 50%;">
-                    <img src="img/debug.png" alt="Image 2" style="width: 50%; height: 50%;">
-                    <img src="img/icon.png" alt="Image 3" style="width: 50%; height: 50%;">
+                    <img src="img/gallery1.jpg" alt="Image 1">
+                    <img src="img/gallery2.jpeg" alt="Image 2">
+                    <img src="img/gallery3.jpg" alt="Image 3">
                 </div>
             </div>
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <a href="gallery.html">Ver mas...</a>
         </div>
-
+    </div><br>
+    
+    <br><div id="content">
         <div id="suscripción">
-            <h2>Suscríbete a nuestro boletín informativo</h2>
-            <form id="register-form">
+            <h2>Suscribete y no te pierdas nada</h2>
+            <p>Con tu correo electrónico puedes recibir notificaciones de nuestra app o nuevas actualizaciones </p>
+            <form id="register-form" action="loader.html">
                 <input id="email" type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
                 <button id="actionButton" onclick="subscription()">Enviar</button>
                 <label for="text">‎ </label>
             </form>
         </div>
+    </div><br>
 
-        <div id="content">
-            <img style="display: block; margin: auto; width: 50%;" src="img/sponsor.png" alt="sponsor">
-        </div>
+    
+        <img style="display: block; margin: auto; width: 300px;" src="img/footers.png" alt="sponsor">
 
-        <script>
-            function subscription() {
-                const correo = document.getElementById('email').value;
 
-                if (correo === '') {
-                }
+    <script>
+        function subscription() {
+            const correo = document.getElementById('email').value;
+
+            if (correo === '') {
             }
-            const carousel = document.getElementById('carousel');
-            const slides = document.getElementById('slides');
-            let isDragging = false;
-            let startX;
-            let scrollLeft;
+        }
 
-            carousel.addEventListener('touchstart', (e) => {
-                isDragging = true;
-                startX = e.touches[0].clientX - carousel.offsetLeft;
-                scrollLeft = carousel.scrollLeft;
-            });
+        function redirect() {
+            window.location.href = "profile.html";
+        }
 
-            carousel.addEventListener('touchend', () => {
-                isDragging = false;
-            });
+        const carousel = document.getElementById('carousel');
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
 
-            carousel.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                const x = e.touches[0].clientX - carousel.offsetLeft;
-                const walk = (x - startX) * 3;
-                carousel.scrollLeft = scrollLeft - walk;
-            });
+        carousel.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            scrollLeft = carousel.scrollLeft;
+        });
 
-        </script>
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+
+    </script>
 </body>
 
 </html>

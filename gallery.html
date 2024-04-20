@@ -5,173 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de imagenes</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        #actionButton {
-            float: right;
-            background-color: #008476;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font: Arial;
-            font-size: 20px;
-        }
-
-        #content {
-            padding: 20px;
-            transition: margin-left 0.5s;
-        }
-
-        #content.img {
-            margin: 0 auto;
-        }
-
-        .slideshow-container {
-            max-width: 800px;
-            position: relative;
-            margin: auto;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 3px 3px 3px 3px;
-            background-color: #088475;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 3px 3px 3px;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: #088475;
-        }
-
-        /* Estilos para los puntos */
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-            background: white;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active,
-        .dot:hover {
-            background-color: #717171;
-        }
-
-        /* Estilos para las imágenes */
-        .img-container {
-            text-align: center;
-        }
-
-        .img-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a.sin-subrayado {
-            text-decoration: none;
-        }
-
-        a:visited {
-            color: #008476;
-        }
-
-        a:link {
-            color: #008476;
-        }
-    </style>
+    <link rel="stylesheet" href="css/gallery.css">
 </head>
 
 <body>
     <div id="content">
-        <h1 style="text-align: center;">Nuestro equipo</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
-            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+        <h1 style="text-align: center;">Galeria de imagenes</h1>
+        <p>Esta es tu galeria completamente animada, llenala de imagenes y fotografias que caracterizen tu empresa y le
+            dan su identidad para que la compartas con tus clientes.</p>
+
         <div class="carousel" id="carousel1">
-            <div class="slides" id="slides1">
-                <img src="img/beta.png" alt="Image 1" style="width: 50%; height: 50%;">
-                <img src="img/debug.png" alt="Image 2" style="width: 50%; height: 50%;">
-                <img src="img/icon.png" alt="Image 3" style="width: 50%; height: 50%;">
+            <div class="slides" id="slides">
+                <img src="img/gallery1.jpg" alt="Image 1">
+                <img src="img/gallery2.jpeg" alt="Image 2">
+                <img src="img/gallery3.jpg" alt="Image 3">
+                <img src="img/gallery4.jpeg" alt="Image 4">
+                <img src="img/gallery5.jpg" alt="Image 5">
+                <img src="img/gallery6.jpg" alt="Image 6">
+                <img src="img/gallery7.png" alt="Image 7">
             </div>
         </div>
-    </div>
-    <div id="content">
-        <h1 style="text-align: center;">Eventos importantes</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
-            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+        
+        <div class="dot-container" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
+
+        <h1 style="text-align: center;">Galeria de premios</h1>
+        <p>Esta es tu galeria completamente animada, llenala de imagenes y fotografias que caracterizen tu empresa y le
+            dan su identidad para que la compartas con tus clientes.</p>
         <div class="carousel" id="carousel2">
-            <div class="slides" id="slides2">
-                <img src="img/beta.png" alt="Image 4" style="width: 50%; height: 50%;">
-                <img src="img/debug.png" alt="Image 5" style="width: 50%; height: 50%;">
-                <img src="img/icon.png" alt="Image 6" style="width: 50%; height: 50%;">
+            <div class="slides" id="slides">
+                <img src="img/gallery7.png" alt="Image 7">
+                <img src="img/gallery3.jpg" alt="Image 3">
+                <img src="img/gallery5.jpg" alt="Image 5">
+                <img src="img/gallery1.jpg" alt="Image 1">
+                <img src="img/gallery6.jpg" alt="Image 6">
+                <img src="img/gallery2.jpeg" alt="Image 2">
+                <img src="img/gallery4.jpeg" alt="Image 4">                
             </div>
         </div>
-    </div>
-    <div id="content">
-        <h1 style="text-align: center;">Premios y reconocimientos</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at sodales elit. Suspendisse
-            ullamcorper odio a dolor ullamcorper, ac convallis purus vehicula.</p>
+        <div class="dot-container" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
+
+        <h1 style="text-align: center;">Galeria de noticias</h1>
+        <p>Esta es tu galeria completamente animada, llenala de imagenes y fotografias que caracterizen tu empresa y le
+            dan su identidad para que la compartas con tus clientes.</p>
         <div class="carousel" id="carousel3">
-            <div class="slides" id="slides3">
-                <img src="img/beta.png" alt="Image 7" style="width: 50%; height: 50%;">
-                <img src="img/debug.png" alt="Image 8" style="width: 50%; height: 50%;">
-                <img src="img/icon.png" alt="Image 9" style="width: 50%; height: 50%;">
+            <div class="slides" id="slides">
+                <img src="img/gallery4.jpeg" alt="Image 4">
+                <img src="img/gallery2.jpeg" alt="Image 2">
+                <img src="img/gallery6.jpg" alt="Image 6">
+                <img src="img/gallery1.jpg" alt="Image 1">
+                <img src="img/gallery5.jpg" alt="Image 5">
+                <img src="img/gallery3.jpg" alt="Image 3">
+                <img src="img/gallery7.png" alt="Image 7">
+                               
             </div>
+        </div>
+        <div class="dot-container" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
         </div>
     </div>
     <div id="content">
-        <img style="display: block; margin: auto; width: 50%;" src="img/sponsor.png" alt="sponsor">
+        <img style="display: block; margin: auto; width: 300px;" src="img/footermain.png" alt="sponsor">
     </div>
+
     <script>
-        // Carrusel 1
+
         const carousel1 = document.getElementById('carousel1');
-        const slides1 = document.getElementById('slides1');
+        const carousel2 = document.getElementById('carousel2');
+        const carousel3 = document.getElementById('carousel3');
         let isDragging1 = false;
-        let startX1;
-        let scrollLeft1;
+        let isDragging2 = false;
+        let isDragging3 = false;
+        let startX1, startX2, startX3;
+        let scrollLeft1, scrollLeft2, scrollLeft3;
 
         carousel1.addEventListener('touchstart', (e) => {
             isDragging1 = true;
-            startX1 = e.touches[0].clientX - carousel1.offsetLeft;
+            startX1 = e.touches[0].clientX;
             scrollLeft1 = carousel1.scrollLeft;
         });
 
@@ -181,21 +112,14 @@
 
         carousel1.addEventListener('touchmove', (e) => {
             if (!isDragging1) return;
-            const x = e.touches[0].clientX - carousel1.offsetLeft;
-            const walk = (x - startX1) * 3;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX1) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
             carousel1.scrollLeft = scrollLeft1 - walk;
         });
 
-        // Carrusel 2
-        const carousel2 = document.getElementById('carousel2');
-        const slides2 = document.getElementById('slides2');
-        let isDragging2 = false;
-        let startX2;
-        let scrollLeft2;
-
         carousel2.addEventListener('touchstart', (e) => {
             isDragging2 = true;
-            startX2 = e.touches[0].clientX - carousel2.offsetLeft;
+            startX2 = e.touches[0].clientX;
             scrollLeft2 = carousel2.scrollLeft;
         });
 
@@ -205,21 +129,14 @@
 
         carousel2.addEventListener('touchmove', (e) => {
             if (!isDragging2) return;
-            const x = e.touches[0].clientX - carousel2.offsetLeft;
-            const walk = (x - startX2) * 3;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX2) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
             carousel2.scrollLeft = scrollLeft2 - walk;
         });
 
-        // Carrusel 3
-        const carousel3 = document.getElementById('carousel3');
-        const slides3 = document.getElementById('slides3');
-        let isDragging3 = false;
-        let startX3;
-        let scrollLeft3;
-
         carousel3.addEventListener('touchstart', (e) => {
             isDragging3 = true;
-            startX3 = e.touches[0].clientX - carousel3.offsetLeft;
+            startX3 = e.touches[0].clientX;
             scrollLeft3 = carousel3.scrollLeft;
         });
 
@@ -229,10 +146,11 @@
 
         carousel3.addEventListener('touchmove', (e) => {
             if (!isDragging3) return;
-            const x = e.touches[0].clientX - carousel3.offsetLeft;
-            const walk = (x - startX3) * 3;
+            const x = e.touches[0].clientX;
+            const walk = (x - startX3) * 1; // Ajusta este valor para controlar la velocidad del desplazamiento
             carousel3.scrollLeft = scrollLeft3 - walk;
         });
+
 
     </script>
 </body>
