@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #efeded;
+    text-decoration: none;
 }
 
 #actionButton {
@@ -27,6 +28,63 @@ body {
 
 #content.img {
     margin: 0 auto;
+}
+
+.carusel{
+    width: 90%;
+    max-width: 120em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    border-radius: 1em;
+    margin-left: 5%;
+    overflow-x: hidden;
+}
+
+.carusel .grande{
+    width: 200%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+    padding: 0 1em;
+
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all .5s ease;
+    transform: translateX(-52.5%);
+}
+
+.carusel .img{
+    width: calc(90% / 2);
+    height: 140px;
+    background-color:rgb(255, 255, 255);
+   
+    margin-top: 1em;
+}
+
+.carusel .puntos{
+    width: 100%;
+    list-style: none;
+
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: -11%;
+}
+
+.carusel .punto{
+    width: 1em;
+    height: 1em;
+    background-color: #bbb;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.carusel .punto.activo{
+    background-color: #717171;
 }
 
 .slideshow-container {
