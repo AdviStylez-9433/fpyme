@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    <!-- Barra superior -->
     <header>
         <nav>
             <div class="container-bar">
@@ -22,24 +22,15 @@
         </nav>
     </header>
 
-    <div class="container-bar-bottom">
-        <ul>
-            <li>
-                <a href="#" class="opts">Nosotros</a>
-            </li>
-            <li>
-                <a href="#" class="opts">Sucursales</a>
-            </li>
-            <li>
-                <a href="#" class="opts">Inicio</a>
-            </li>
-            <li>
-                <a href="#" class="opts">Ofertas</a>
-            </li>
-            <li>
-                <a href="#" class="opts">Contacto</a>
-            </li>
-        </ul>
+    <!-- Barra inferior -->
+    <div class="header">
+        <nav class="container-bar-bottom">
+            <a href=""><i class='bx bx-user' style='color:black' ></i>Nosotros</a>
+            <a href=""><i class='bx bx-buildings' style='color:black' ></i>Sucursales</a>
+            <a href=""><i class='bx bx-home-alt-2' style='color:black' ></i>Inicio</a>
+            <a href=""><i class='bx bxs-offer' style='color:black' ></i>Ofertas</a>
+            <a href=""><i class='bx bxs-contact' style='color:black' ></i>Contacto</a>
+        </nav>
     </div>
 
     <!-- Banner superior con imagenes que se relacionaran a la empresa -->
@@ -55,6 +46,7 @@
     </div>
 
     <br>
+        <!-- Seccion de accesos rapidos -->
     <h1 class="titulo1">accesos rapidos</h1>
     <div class="container-accesos-rap">
         <div class="card-acceso">
@@ -129,6 +121,118 @@
     </div>
 
     <br>
+        <!-- Seccion de galeria -->
+    <h1 class="titulo1" id="titulo-galeria">Galeria de imagenes</h1>
+    <div class="container-galeria" id="cont-galeria">
+        <div class="galeria">
+            <a href="#imagen1">
+                <img src="img/imagen1.jpg" alt="imagen 1">
+            </a>
+            <a href="#imagen2">
+                <img src="img/imagen2.jpg" alt="imagen 2">
+            </a>
+            <a href="#imagen3">
+                <img src="img/imagen3.jpg" alt="imagen 3">
+            </a>
+            <a href="#imagen4">
+                <img src="img/imagen4.jpg" alt="imagen 4">
+            </a>
+            <a href="#imagen5">
+                <img src="img/imagen5.jpg" alt="imagen 5">
+            </a>
+            <a href="#imagen6">
+                <img src="img/imagen6.jpg" alt="imagen 6">
+            </a>
+        </div>
+    </div>
+
+    <!-- boton de ver mas -->
+    <div class="opcion">
+        <button id="btnShow">
+            ver mas
+        </button>
+    </div>
+
+    <!-- Seccion que hace zoom a las fotos -->
+    <div class="light-box" id="imagen1">
+        <a href="#imagen6" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1.jpg" alt="">
+        <a href="#imagen2" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff' ></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff' ></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen2">
+        <a href="#imagen1" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen2.jpg" alt="">
+        <a href="#imagen3" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff' ></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff' ></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen3">
+        <a href="#imagen2" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen3.jpg" alt="">
+        <a href="#imagen4" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff' ></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff' ></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen4">
+        <a href="#imagen3" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen4.jpg" alt="">
+        <a href="#imagen5" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff' ></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff' ></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen5">
+        <a href="#imagen4" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen5.jpg" alt="">
+        <a href="#imagen6" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff' ></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff' ></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen6">
+        <a href="#imagen5" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen6.jpg" alt="">
+        <a href="#imagen1" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff' ></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff' ></i>
+        </a>
+    </div>
+
+    <br>
     <div id="content">
         <!-- Contenido de la página -->
         <p>Hola, esta es tu app hecha solo con HTML 5</p>
@@ -199,6 +303,7 @@
     <img style="display: block; margin: auto; width: 300px;" src="img/footers.png" alt="sponsor">
 
 
+    <script src="js/ShowHide.js"></script>
     <script src="js/prueba.js"></script>
     <script src="js/carrusel.js"></script>
     <script>
