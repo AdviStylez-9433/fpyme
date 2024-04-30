@@ -233,60 +233,51 @@
     </div>
 
     <br>
-    <div id="content">
-        <!-- Contenido de la página -->
-        <p>Hola, esta es tu app hecha solo con HTML 5</p>
-        <h1 style="text-align: center;">Bienvenido a MyApp</h1>
-        <p>Esta es una app de ejemplo echa 100% con HTML 5, puedes personalizar este contenido según tus
-            necesidades.</p>
-
-        <h2>¿Quienes somos?</h2>
-        <p>Esta una seccion editable para que la personalizes con la identidad de tu empresa.</p>
-        <img style="display: block; margin: auto; width: 300px;" src="img/logo.png" alt="foto"><br>
-        <a href="aboutus.html">Ir a...</a>
-    </div><br>
+    <!-- Seccion de sucursales -->
+    <div class="container-sucursales" id="cont-sucur">
+        <div class="item-sucursal">
+            <h2>Sucursal N°1</h2>
+            <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p>Encargado: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+        </div>
+        <div class="item-sucursal">
+            <h2>Sucursal N°2</h2>
+            <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p>Encargado: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+        </div>
+        <div class="item-sucursal">
+            <h2>Sucursal N°3</h2>
+            <p>Direccion: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p>Horario: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <p>Encargado: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+        </div>
+    </div>
+    <div class="opcion2">
+        <button id="btnShow2">
+            ver mas
+        </button>
+    </div>
 
     <br>
-    <div id="content">
-        <h2>Últimas novedades</h2>
-        <p>Esta una seccion con la ultimas noticias ocurridas en nuestra empresa y nuestro circulo.</p>
-        <div class="noticias">
-            <!-- Noticia 1 -->
-            <div class="noticia">
-                <h3>"Robots que aprenden por sí mismos: Avance revolucionario en Inteligencia Artificial"</h3>
-                <div class="slideshow-container">
-                    <div class="carousel" id="carousel">
-                        <div class="slides" id="slides">
-                            <img src="img/news1.jpeg" alt="image 1"
-                                style="display: block; margin: auto; width: 300px; height: 200px;">
-                        </div>
-                    </div>
-                </div>
-                <br><a href="aboutus.html">Leer mas...</a>
-            </div>
+    <div class="container-noticias">
+        <div class="noticia">
+            <h2>Noticia N°1</h2>
+            <img src="img/noticia1.jpg" alt="Noticia 1">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci in culpa quia <br>
+                 quisquam non aliquam minus. Nobis sunt saepe vitae deleniti maxime dolorum <br>
+                 corporis enim, aut delectus, aliquid, repellendus nam!</p>
         </div>
-    </div><br>
+    </div>
+
+    <div class="opcion3">
+        <button id="btnShow3">
+            ver mas
+        </button>
+    </div>
 
     <br>
-    <div id="content">
-        <h2>Galeria de fotos</h2>
-        <p>Esta es una galeria de fotos con carrusel donde puedes poner imagenes de tu empresa o tu contenido.</p>
-        <div class="slideshow-container">
-            <div class="carousel" id="carousel1">
-                <div class="slides" id="slides">
-                    <img src="img/gallery1.jpg" alt="Image 1">
-                    <img src="img/gallery2.jpeg" alt="Image 2">
-                    <img src="img/gallery3.jpg" alt="Image 3">
-                </div>
-            </div>
-            <div class="dot-container" style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-            <a href="gallery.html">Ver mas...</a>
-        </div>
-    </div><br>
 
     <br>
     <div id="content">
@@ -302,8 +293,8 @@
 
     <img style="display: block; margin: auto; width: 300px;" src="img/footers.png" alt="sponsor">
 
-
     <script src="js/ShowHide.js"></script>
+    <script src="js/ShowHide2.js"></script>
     <script src="js/prueba.js"></script>
     <script src="js/carrusel.js"></script>
     <script>
