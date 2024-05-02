@@ -332,32 +332,88 @@ body {
     transform: scale(1);
 }
 
+.fondo-sucursal{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position:fixed;
+    background: rgba(0,0,0,0.5);
+    transition: tranform 0.4s ease-in-out;
+    transform: scale(0);
+    z-index: 1000;
+}
+
 .container-sucursales{
     background-color: #fff;
     width: 90%;
-    height: 42vw;
-    overflow-y: hidden;
+    height: 100%;
     border-radius: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 5%;
+    padding-bottom: 15px;
+    padding-top: 1px;
+}
+
+.container-sucursales a:active .item-sucursal{
+    background-color: #666;
 }
 
 .item-sucursal{
-    margin-left: 4%;
-    margin-top: 2%;
+    margin-left: 5%;
     width: 90%;
+    height: 45px;
     background-color: #c4c4c4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 1em;
-    padding: 0.2em;
 }
 
 .item-sucursal h2{
-    margin-left: 10px;
+    text-align: center;
+    line-height: 45px;
 }
 
-.item-sucursal p{
-    margin-left: 10px;
+.light-box-sucursal{
+    width: 90%;
+    height: 80vw;
+    position: fixed;
+    top: 25%;
+    left: 0;
+    margin-left: 5%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    display: flex;
+}
+
+.zoom-sucursal h2{
+    margin-left: 30px;
+    padding-top: 5px;
+}
+
+.zoom-sucursal p{
+    margin-left: 20px;
+    font-size: 16px;
+    margin-top: -8px;
+}
+
+.sucursales-maps{
+    width: 80vw;
+    height: 40vw;
+    margin-left: 4vw;
+    margin-top: -8px;
+    border-radius: 1em;
+}
+
+.close2{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+}
+
+.fondo-sucursal:target{
+    transform: scale(1);
 }
 
 #btnShow2{
@@ -375,8 +431,9 @@ body {
 
 .container-noticias{
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 90%;
-    height: 94vw;
+    height: 65vw;
     overflow-y: hidden;
     border-radius: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -387,7 +444,7 @@ body {
     margin-left: 5%;
     margin-top: 5%;
     width: 80%;
-    height: 77vw;
+    height: 50vw;
     background-color: #c4c4c4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 1em;
@@ -407,6 +464,57 @@ body {
 
 .noticia p{
     text-align: justify;
+}
+
+.container-noticias a:active img{
+    filter: blur(2px);
+}
+
+.fondo-noticia{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position:fixed;
+    background: rgba(0,0,0,0.5);
+    transition: tranform 0.4s ease-in-out;
+    transform: scale(0);
+    z-index: 1000;
+}
+
+.light-box-noticia{
+    width: 90%;
+    height: 80vw;
+    position: fixed;
+    top: 25%;
+    left: 0;
+    margin-left: 5%;
+    background-color: #fff;
+    border-radius: 1em;
+    display: flex;
+}
+
+.zoom-noticia h2{
+    margin-left: 30px;
+    padding-top: 5px;
+}
+
+.zoom-noticia p{
+    padding: 1em;
+    font-size: 16px;
+    margin-top: -10px;
+    text-align: justify;
+}
+
+.zoom-noticia img{
+    width: 80vw;
+    height: 40vw;
+    margin-left: 4vw;
+    margin-top: -8px;
+    border-radius: 1em;
+}
+
+.fondo-noticia:target{
+    transform: scale(1);
 }
 
 #btnShow3{
@@ -452,6 +560,10 @@ body {
     80%{margin-left: -200%;}
     100%{margin-left: -200%;}
 }
+
+
+
+/* Codigo Pelo */
 
 .slideshow-container {
     max-width: 800px;
