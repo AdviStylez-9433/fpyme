@@ -34,7 +34,7 @@ body {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 50px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -44,45 +44,26 @@ body {
 }
 
 .container-bar a{
-    margin-left: 35%;
+    margin-left: 30%;
 }
 
 #logo{
-    width: 10%;
     border-radius: 1em;
     margin-left: 1em;
     line-height: 50px;
 }
 
 #user{
-    font-size: 40px;
+    font-size: 50px;
     border-radius: 1em;
     margin-left: 1em;
     color: black;
-    line-height: 50px;
+    line-height: 70px;
+
 }
 
 .container-bar p{
-    margin-left: 5%;
-}
-
-.header{
-    display: flex;
-    height: 60px;
-    justify-content: space-between;
-    position: fixed;
-    background-color: #fff;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    align-items: center;
-    padding: 0.2em;
-}
-
-.container-bar-bottom a{
-    padding-left: 10px;
-    font-size: 14.5px;
+    font-size: 23px;
 }
 
 .banner-sup{
@@ -91,7 +72,7 @@ body {
     border-radius: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 5%;
-    margin-top: 60px;
+    margin-top: 85px;
 }
 
 .slider-box-banner{
@@ -562,7 +543,6 @@ body {
 }
 
 
-
 /* Codigo Pelo */
 
 .slideshow-container {
@@ -833,3 +813,5 @@ transform: translateY(15%);
     border: none;
     cursor: pointer;
 }
+
+
