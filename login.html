@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-        <form id="register-form" action="loaderlogin.html">
+        <form id="register-form">
             <h1>Inicio de sesion</h1>
 
             <label for="email">Correo electrónico:</label>
@@ -28,13 +28,24 @@
 
     <img style="display: block; margin: auto; width: 300px;" src="img/footers.png" alt="footer">
 
+    <script src="js/aplicacion.js"></script>
     <script>
         function message() {
+            // Obtener los valores del formulario
             const correo = document.getElementById('email').value;
-            const contraseña = document.getElementById('password').value;
+            const contrasena = document.getElementById('password').value;
 
-            if (correo === '' || contraseña === '') {
-            }
+            // Llamar a la función para iniciar sesión
+            iniciarSesion(correo, contrasena)
+                .then(token => {
+                    // Guardar el token en localStorage (o en donde sea necesario)
+                    localStorage.setItem('token', token);
+                    // Redirigir al usuario a otra página, por ejemplo:
+                    window.location.href = 'profile.html';
+                })
+                .catch(error => {
+                    alert('Error: ' + error.message);
+                });
         }
     </script>
 </body>

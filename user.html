@@ -10,7 +10,7 @@
 
 <body>
   <div class="container">
-    <form id="register-form" action="loader.html">
+    <form id="register-form">
       <h1>Mi perfil</h1>
 
       <label for="foto_perfil">Foto de perfil:</label>
@@ -37,15 +37,53 @@
   <img style="display: block; margin: auto; width: 300px;" src="img/footers.png" alt="sponsor">
 
 
-
+  <script src="js/aplicacion.js"></script>
   <script>
     function message() {
-      const nombre = document.getElementById('username').value;
-      const correo = document.getElementById('email').value;
-      const contraseña = document.getElementById('password').value;
+      // Obtener el token del usuario (suponiendo que ya lo tienes disponible)
+      const token = 'tu_token_aqui';
 
-      if (nombre === '' || correo === '' || contraseña === '') {
-      }
+      // Obtener los valores del formulario
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const fotoPerfil = document.getElementById('foto_perfil').files[0];
+
+      // Crear un objeto FormData para enviar los datos
+      const formData = new FormData();
+      formData.append('username', username);
+      formData.append('email', email);
+      formData.append('password', password);
+      formData.append('foto_perfil', fotoPerfil);
+
+      // Llamar a la función para obtener información del usuario
+      obtenerInformacionUsuario(token)
+        .then(usuario => {
+          // Actualizar los datos del usuario con los valores del formulario
+          usuario.username = username;
+          usuario.email = email;
+          usuario.password = password;
+          // Aquí puedes agregar lógica para manejar la imagen de perfil si es necesario
+
+          // Enviar los datos actualizados del usuario al servidor
+          return fetch('/actualizar_usuario', {
+            method: 'PUT',
+            headers: {
+              'Authorization': `Bearer ${token}`
+            },
+            body: formData
+          });
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error al actualizar la información del usuario');
+          }
+          alert('Perfil actualizado exitosamente');
+          window.location.href = 'index.html';
+        })
+        .catch(error => {
+          alert('Error: ' + error.message);
+        });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
