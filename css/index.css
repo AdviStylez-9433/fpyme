@@ -58,7 +58,7 @@ body {
     border-radius: 1em;
     margin-left: 1em;
     color: black;
-    line-height: 70px;
+    margin-top: 9%;
 
 }
 
@@ -121,23 +121,29 @@ body {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
+    padding-bottom: 2em;
 }
 
 .card-acceso h2{
-    font-size: 12px;
+    font-size: 16px;
     text-align: center;
     margin-top: 15px;
     margin-bottom: -2px;
 }
 
-.card-acceso input{
+.card-acceso a{
     width: 80%;
-    margin-left: 10%;
+    margin-left: 20%;
     margin-top: 10%;
     margin-bottom: -5px;
     border-radius: 1em;
-    border: #bbb solid 0.2em;
-    height: 40%;
+    border: #042ffb solid 0.15em;
+    padding: 0.5em 1.5em;
+    font-size: 15px;
+}
+
+.card-acceso span {
+    color: #042ffb;
 }
 
 .contenerdor-ofertas{
@@ -170,7 +176,8 @@ body {
     height: 250px;
     position: relative;
     padding-top: 1em;
-    background-color: #d2d2d2;
+    background-color: white;
+    border: #d2d2d2 solid 0.1em;
     border-radius: 1em;
     margin-left: 1%;
 }
@@ -201,16 +208,19 @@ body {
 }
 
 #btnShow{
-    width: 100px;
-    height: 30px;
+    width: 25vw;
+    height: 8vw;
     border-radius: 1em;
-    border: #666 solid 0.15em;
+    border: #042ffb solid 0.15em;
+    color: #042ffb;
     margin-top: 15px;
-    margin-left: 40%;
+    margin-left: 35%;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 #btnShow:active{
-    background-color: #424141;
+    background-color: #ededed;
 }
 
 .container-galeria{
@@ -230,6 +240,7 @@ body {
     margin:auto;
     grid-gap: 10px;
     overflow: hidden;
+    border-radius: 1em;
 }
 
 .galeria a{
@@ -240,10 +251,11 @@ body {
     margin-top: 1.2em;
     margin-bottom: 1em;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
 }
 
 .galeria a:active img{
-    filter: blur(2px);
+    filter: blur(2.5px);
     transform: rotate(5deg) scale(1.2);
 }
 
@@ -336,21 +348,24 @@ body {
 }
 
 .container-sucursales a:active .item-sucursal{
-    background-color: #666;
+    background-color: #ededed;
 }
 
 .item-sucursal{
     margin-left: 5%;
+    margin-bottom: 3%;
+    margin-top: 5%;
     width: 90%;
     height: 45px;
-    background-color: #c4c4c4;
+    background-color: white;
+    border: #042ffb solid 0.15em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 1em;
 }
 
 .item-sucursal h2{
     text-align: center;
-    line-height: 45px;
+    line-height: 10px;
 }
 
 .light-box-sucursal{

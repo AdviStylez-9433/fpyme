@@ -5,15 +5,20 @@ body {
 }
 
 #actionButton {
-    float: right;
-    background-color: #633ae5;
-    color: white;
+    width: 30vw;
+    margin-left: 15vw;
+    background-color: white;
+    color: #042ffb;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border: #042ffb solid 0.1em;
+    border-radius: 1em;
     cursor: pointer;
     font: Arial;
     font-size: 20px;
+}
+
+#actionButton:active {
+    background-color: #efeded;
 }
 
 #content {
@@ -22,14 +27,14 @@ body {
 }
 
 .container {
+    margin-top: 20vw;
+    margin-left: 15vw;
     display: block;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 0 auto;
-    width: 300px;
-    margin-top: 1rem;
+    width: 60vw;
     margin-bottom: 1rem;
 }
 
@@ -69,9 +74,9 @@ a.sin-subrayado {
 }
 
 a:visited {
-    color: #633ae5;
+    color: #042ffb;
 }
 
 a:link {
-    color: #633ae5;
+    color: #042ffb;
 }

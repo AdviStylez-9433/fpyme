@@ -6,15 +6,20 @@ body {
 }
 
 #actionButton {
-    float: right;
-    background-color: #633ae5;
-    color: white;
+    width: 30vw;
+    margin-left: 15vw;
+    background-color: white;
+    color: #042ffb;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border: #042ffb solid 0.1em;
+    border-radius: 1em;
     cursor: pointer;
     font: Arial;
     font-size: 20px;
+}
+
+#actionButton:active {
+    background-color: #efeded;
 }
 
 #content {
@@ -29,8 +34,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 0 auto;
-    width: 300px;
-    margin-top: 1rem;
+    width: 60vw;
+    margin-top: 20vw;
     margin-bottom: 1rem;
 }
 

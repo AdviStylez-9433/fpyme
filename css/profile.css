@@ -4,22 +4,27 @@ body {
   background-color: #efeded;
 }
 
-  #actionButton {
-    float: right;
-    background-color: #633ae5;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font: Arial;
-    font-size: 20px;
-  }
-
   #content {
     padding: 20px;
     transition: margin-left 0.5s;
   }
+
+  #actionButton {
+    width: 30vw;
+    margin-left: 15vw;
+    background-color: white;
+    color: #042ffb;
+    padding: 10px 20px;
+    border: #042ffb solid 0.1em;
+    border-radius: 1em;
+    cursor: pointer;
+    font: Arial;
+    font-size: 20px;
+}
+
+#actionButton:active {
+    background-color: #efeded;
+}
 
   .container {
     display: block;
@@ -68,11 +73,11 @@ body {
   }
 
   a:visited {
-    color: #633ae5;
+    color: #042ffb;
   }
 
   a:link {
-    color: #633ae5;
+    color: #042ffb;
   }
 
   .strength-meter {

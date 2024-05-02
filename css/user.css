@@ -6,16 +6,21 @@ body {
   }
 
   #actionButton {
-    float: right;
-    background-color: #633ae5;
-    color: white;
+    width: 30vw;
+    margin-left: 15vw;
+    background-color: white;
+    color: #042ffb;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border: #042ffb solid 0.1em;
+    border-radius: 1em;
     cursor: pointer;
     font: Arial;
     font-size: 20px;
-  }
+}
+
+#actionButton:active {
+    background-color: #efeded;
+}
 
   #content {
     padding: 20px;
@@ -122,9 +127,9 @@ body {
   }
 
   a:visited {
-    color: #633ae5;
+    color: #042ffb;
   }
 
   a:link {
-    color: #633ae5;
+    color: #042ffb;
   }
