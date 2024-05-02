@@ -10,7 +10,7 @@
 
 <body>
   <div class="container">
-    <form id="register-form" action="loaderprofile.html">
+    <form id="register-form" action="message()" method="post">
       <h1>Registro de usuario</h1>
 
       <label for="foto_perfil">Foto de perfil:</label>
@@ -42,17 +42,30 @@
   <img style="display: block; margin: auto; width: 300px;" src="img/footers.png" alt="sponsor">
 
 
-
+  <script src="js/aplicacion.js"></script>
   <script>
     function message() {
-      const nombre = document.getElementById('username').value;
+      // Obtener los valores del formulario
       const correo = document.getElementById('email').value;
-      const contraseña = document.getElementById('password').value;
-      const confirmarcontraseña = document.getElementById('confirmpassword').value;
+      const nombreUsuario = document.getElementById('username').value;
+      const contrasena = document.getElementById('password').value;
+      const urlImagen = document.getElementById('foto_perfil').value; // Aquí puedes obtener la URL de la imagen
 
-      if (nombre === '' || correo === '' || contraseña === '' || confirmarcontraseña === '') {
-      }
+      // Llamar a la función para crear un nuevo usuario
+      crearNuevoUsuario(correo, nombreUsuario, contrasena, urlImagen)
+        .then(exito => {
+          if (exito) {
+            alert('Usuario registrado exitosamente');
+            window.location.href = 'index.html';
+          } else {
+            alert('Error al registrar el usuario');
+          }
+        })
+        .catch(error => {
+          alert('Error: ' + error.message);
+        });
     }
+
     const passwordInput = document.getElementById('password');
     const strengthBar = document.getElementById('strengthBar');
     const strengthLabel = document.getElementById('strengthLabel');
