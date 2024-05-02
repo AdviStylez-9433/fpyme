@@ -91,28 +91,6 @@ function editarUsuario(token, correo, nombreUsuario, contrasena, urlImagen) {
         });
 }
 
-/* Ejemplo de uso
-const token = 'tu_token_de_sesion'; // Reemplaza 'tu_token_de_sesion' con el token real de sesión
-const usuarioEditado = {
-  correo: 'nuevo_correo@example.com',
-  nombreUsuario: 'nuevo_nombre_usuario',
-  contrasena: 'nueva_contraseña_segura',
-  urlImagen: 'https://example.com/nueva_imagen_usuario.jpg'
-};
- 
-editarUsuario(token, usuarioEditado.correo, usuarioEditado.nombreUsuario, usuarioEditado.contrasena, usuarioEditado.urlImagen)
-  .then(exito => {
-    if (exito) {
-      console.log('Usuario editado exitosamente');
-    } else {
-      console.log('Error al editar el usuario');
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error.message);
-  });
-*/
-
 function eliminarUsuario(token) {
     const url = '/usuario';
     const datosUsuario = {
@@ -141,49 +119,33 @@ function eliminarUsuario(token) {
         });
 }
 
-/* Ejemplo de uso
-const token = 'tu_token_de_sesion'; // Reemplaza 'tu_token_de_sesion' con el token real de sesión
+function iniciarSesion (Correo, Contrasena) {
+  const url = '/api/tokenUsuario'
+  const datosInicioSesion = {
+    correo: Correo,
+    contrasena: Contrasena
+  }
+  const parametros = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(datosInicioSesion)
+  }
 
-eliminarUsuario(token)
-    .then(exito => {
-        if (exito) {
-            console.log('Usuario eliminado exitosamente');
-        } else {
-            console.log('Error al eliminar el usuario');
-        }
+  return fetch(url, parametros)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error al iniciar sesión');
+      }
+      return response.json()
+    })
+    .then(data => {
+      return data.token // Devuelve el token de sesión actual
     })
     .catch(error => {
-        console.error('Error:', error.message);
-    });
-*/
-
-function iniciarSesion(correo, contrasena) {
-    const url = '/tokenUsuario';
-    const datosInicioSesion = {
-        correo: correo,
-        contrasena: contrasena
-    };
-    const parametros = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(datosInicioSesion)
-    };
-
-    return fetch(url, parametros)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al iniciar sesión');
-            }
-            return response.json();
-        })
-        .then(data => {
-            return data.token; // Devuelve el token de sesión actual
-        })
-        .catch(error => {
-            throw error; // Reenvía el error para manejarlo fuera de la función
-        });
+      throw error // Reenvía el error para manejarlo fuera de la función
+    })
 }
 
 /* Ejemplo de uso
