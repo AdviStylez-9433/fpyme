@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (progress >= 100) {
           clearInterval(interval);
           // Aquí puedes redirigir a tu página principal o realizar cualquier otra acción
-          window.location.href = "login.html";
+          window.location.href = "index.html";
           // O simplemente ocultar la splash screen
           loader.parentElement.parentElement.style.display = "none";
         }
