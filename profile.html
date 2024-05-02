@@ -49,10 +49,10 @@
       const correo = document.getElementById('email').value;
       const nombreUsuario = document.getElementById('username').value;
       const contrasena = document.getElementById('password').value;
-      const urlImagen = document.getElementById('foto_perfil').value; // Aquí puedes obtener la URL de la imagen
+      // const urlImagen = document.getElementById('foto_perfil').value; // Aquí puedes obtener la URL de la imagen
 
       // Llamar a la función para crear un nuevo usuario
-      crearNuevoUsuario(correo, nombreUsuario, contrasena, urlImagen)
+      crearNuevoUsuario(correo, nombreUsuario, contrasena, '')
         .then(exito => {
           if (exito) {
             alert('Usuario registrado exitosamente');
