@@ -10,7 +10,7 @@
 
 <body>
   <div class="container">
-    <form id="register-form">
+    <form id="register-form" onsubmit="event.preventDefault(); message();">
       <h1>Registro de usuario</h1>
 
       <label for="foto_perfil">Foto de perfil:</label>
@@ -33,7 +33,7 @@
       <div class="strength-bar" id="strengthBar">‎ </div>
       <div class="strength-label" id="strengthLabel"></div>
 
-      <button id="actionButton" onclick="message()">Registrar</button><br>
+      <button id="actionButton">Registrar</button><br>
       <a href="login.html" class="sin-subrayado">Iniciar sesion</a>
 
     </form>
