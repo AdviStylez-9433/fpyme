@@ -25,6 +25,42 @@ body {
     margin: 0 20px;
   }
 
+  .container-bar{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    word-wrap: break-word;
+}
+
+.container-bar a{
+    margin-left: 30%;
+}
+
+#logo{
+    border-radius: 1em;
+    margin-left: 1em;
+    line-height: 50px;
+}
+
+#user{
+    font-size: 50px;
+    border-radius: 1em;
+    margin-left: 1em;
+    color: black;
+    margin-top: 9%;
+
+}
+
+.container-bar p{
+    font-size: 21px;
+}
+
 .carousel {
     width: 100%;
     height: 100%;
