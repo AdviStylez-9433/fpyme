@@ -135,7 +135,7 @@ body {
 .card-acceso a{
     display: block;
     width: 16vw;
-    margin-left: 2.5vw;
+    margin-left: 2vw;
     border-radius: 1em;
     border: #042ffb solid 0.15em;
     padding: 0.5em 1.0em;
@@ -155,7 +155,7 @@ body {
 }
 
 #card3{
-    margin-left: 2.5vw;
+    margin-left: 2vw;
 }
 
 .contenerdor-ofertas{
