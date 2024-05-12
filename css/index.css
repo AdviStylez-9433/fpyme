@@ -135,7 +135,7 @@ body {
 .card-acceso a{
     display: block;
     width: 16vw;
-    margin-left: 3vw;
+    margin-left: 2.5vw;
     border-radius: 1em;
     border: #042ffb solid 0.15em;
     padding: 0.5em 1.0em;
@@ -155,7 +155,7 @@ body {
 }
 
 #card3{
-    margin-left: 2vw;
+    margin-left: 2.5vw;
 }
 
 .contenerdor-ofertas{
@@ -220,13 +220,13 @@ body {
 }
 
 #btnShow{
-    width: 25vw;
-    height: 8vw;
+    width: 35vw;
+    height: 10vw;
     border-radius: 1em;
     border: #042ffb solid 0.15em;
     color: #042ffb;
     margin-top: 15px;
-    margin-left: 35%;
+    margin-left: 32.5vw;
     font-weight: bold;
     font-size: 15px;
 }
