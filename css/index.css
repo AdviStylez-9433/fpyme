@@ -184,6 +184,7 @@ body {
 
 .slider-box-ofertas li{
     list-style: none;
+    margin-left: 1%;
     width: 50%;
     height: 250px;
     position: relative;
@@ -191,6 +192,10 @@ body {
     background-color: white;
     border: #d2d2d2 solid 0.1em;
     border-radius: 1em;
+}
+
+#liUno{
+    margin-left: 0;
 }
 
 .slider-box-ofertas img {
