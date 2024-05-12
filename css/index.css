@@ -117,7 +117,7 @@ body {
 }
 
 .card-acceso{
-    width: 30%;
+    width: 30vw;
     margin-left: 2.5%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -133,10 +133,9 @@ body {
 }
 
 .card-acceso a{
-    width: 80%;
-    margin-left: 20%;
-    margin-top: 10%;
-    margin-bottom: 5px;
+    display: block;
+    width: 16vw;
+    margin-left: 2vw;
     border-radius: 1em;
     border: #042ffb solid 0.15em;
     padding: 0.5em 1.0em;
@@ -145,6 +144,18 @@ body {
 
 .card-acceso span {
     color: #042ffb;
+}
+
+#card1{
+    margin-left: -0.5vw;
+}
+
+#card2{
+    margin-left: -1.5vw;
+}
+
+#card3{
+    margin-left: 1vw;
 }
 
 .contenerdor-ofertas{
