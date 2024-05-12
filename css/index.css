@@ -155,7 +155,7 @@ body {
 }
 
 #card3{
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 
 .contenerdor-ofertas{
@@ -381,8 +381,8 @@ body {
 }
 
 .light-box-sucursal{
-    width: 90%;
-    height: 80vw;
+    width: 90vw;
+    height: 90vw;
     position: fixed;
     top: 25%;
     left: 0;
