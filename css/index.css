@@ -191,7 +191,6 @@ body {
     background-color: white;
     border: #d2d2d2 solid 0.1em;
     border-radius: 1em;
-    margin-left: 1%;
 }
 
 .slider-box-ofertas img {
@@ -257,7 +256,7 @@ body {
 
 .galeria a{
     display: block;
-    width: 85%;
+    width: 80%;
     position: relative;
     overflow: hidden;
     margin-top: 1.2em;
