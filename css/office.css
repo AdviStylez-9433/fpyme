@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container-bar{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    word-wrap: break-word;
+}
+
+.container-bar a{
+    margin-left: 20%;
+}
+
+#logo{
+    border-radius: 1em;
+    margin-left: 1em;
+    line-height: 50px;
+}
+
+#user{
+    font-size: 50px;
+    border-radius: 1em;
+    margin-left: 1em;
+    color: black;
+    margin-top: 1vw;
+
+}
+
+#actionButton {
+    float: right;
+    background-color: #008476;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font: Arial;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#content {
+    margin-top: 80px;
+    padding: 20px;
+    transition: margin-left 0.5s;
+}
+
+#sucursales {
+    margin-top: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    column-count: 1;
+    column-gap: 20px;
+}
+
+#sucursales h2 {
+    text-align: center;
+}
+
+.sucursal {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+}
+
+#iframeContainer {
+    width: 250px;
+    /* Ancho del contenedor */
+    height: 250px;
+    /* Altura del contenedor */
+    border: 1px solid #ccc;
+    /* Borde del contenedor */
+    padding: 10px;
+    /* Espacio interior del contenedor */
+    margin: 20px auto;
+    /* Margen externo del contenedor (centrado horizontalmente) */
+    overflow: hidden;
+    /* Oculta el contenido que se desborda del contenedor */
+    border-radius: 8px;
+    /* Borde redondeado del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra del contenedor */
+}
+
+#iframeContainer iframe {
+    width: 100%;
+    /* Ancho completo del iframe dentro del contenedor */
+    height: 100%;
+    /* Altura completa del iframe dentro del contenedor */
+    border: none;
+    /* Sin borde para el iframe */
+}
+
+#menuSuperior {
+    background-color: white;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px 3px 3px 3px;
+    background-color: #088475;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #088475;
+}
+
+/* Estilos para los puntos */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Estilos para las imágenes */
+.img-container {
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}

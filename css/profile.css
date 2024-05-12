@@ -11,7 +11,7 @@ body {
 
   #actionButton {
     width: 30vw;
-    margin-left: 15vw;
+    margin-left: 20vw;
     background-color: white;
     color: #042ffb;
     padding: 10px 20px;
@@ -38,11 +38,19 @@ body {
     margin-bottom: 1rem;
   }
 
+  .prev{
+    width: 30vw;
+    height: 30vw;
+    margin-left: 20vw;
+  }
+
   .container img {
-    width: 40%;
-    height: 40%;
+    width: 100%;
+    height: 100%;
     display: block;
     margin: auto;
+    border-radius: 50em;
+    object-fit: cover;
   }
 
   h1 {

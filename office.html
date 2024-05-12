@@ -6,171 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/aplicacion.js"></script>
     <title>Sucursales</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        #actionButton {
-            float: right;
-            background-color: #008476;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font: Arial;
-            font-size: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        #content {
-            margin-top: 80px;
-            padding: 20px;
-            transition: margin-left 0.5s;
-        }
-
-        #sucursales {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            column-count: 1;
-            column-gap: 20px;
-        }
-
-        #sucursales h2 {
-            text-align: center;
-        }
-
-        .sucursal {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px;
-            width: 300px;
-        }
-
-        #iframeContainer {
-            width: 250px;
-            /* Ancho del contenedor */
-            height: 250px;
-            /* Altura del contenedor */
-            border: 1px solid #ccc;
-            /* Borde del contenedor */
-            padding: 10px;
-            /* Espacio interior del contenedor */
-            margin: 20px auto;
-            /* Margen externo del contenedor (centrado horizontalmente) */
-            overflow: hidden;
-            /* Oculta el contenido que se desborda del contenedor */
-            border-radius: 8px;
-            /* Borde redondeado del contenedor */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            /* Sombra del contenedor */
-        }
-
-        #iframeContainer iframe {
-            width: 100%;
-            /* Ancho completo del iframe dentro del contenedor */
-            height: 100%;
-            /* Altura completa del iframe dentro del contenedor */
-            border: none;
-            /* Sin borde para el iframe */
-        }
-
-        #menuSuperior {
-            background-color: white;
-            padding: 10px;
-            color: white;
-            text-align: center;
-        }
-
-        #searchInput {
-            padding: 10px;
-            width: 250px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
-
-        .slideshow-container {
-            max-width: 800px;
-            position: relative;
-            margin: auto;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 30%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 3px 3px 3px 3px;
-            background-color: #088475;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 3px 3px 3px;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: #088475;
-        }
-
-        /* Estilos para los puntos */
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-            background: white;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active,
-        .dot:hover {
-            background-color: #717171;
-        }
-
-        /* Estilos para las imágenes */
-        .img-container {
-            text-align: center;
-        }
-
-        .img-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="css/office.css">
 </head>
 
 <body>
+
+    <!-- Barra superior -->
+    <header>
+        <nav>
+            <div class="container-bar">
+                <img src="img/main.png" alt="logo" id="logo" width="15%" height="90%">
+                <p>‎ ¡Hola, User!</p>
+                <a href="user.html"><img src="img/profile.png" id="user" style="width: 15vw; height: 15vw;"></a>
+            </div>
+        </nav>
+    </header>
+
     <div id="sucursales">
         <h1>Locales y oficinas</h1>
         <div id="menuSuperior">
