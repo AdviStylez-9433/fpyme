@@ -77,9 +77,10 @@ body {
 }
 
 .slider-box-banner{
-    width: 85%;
+    width: 85vw;
     height: auto;
-    margin: 50px auto 0;
+    margin-left: 6.5vw;
+    margin-top: 15vw;
     overflow-x: hidden;
 }
 
