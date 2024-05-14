@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<link>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/aplicacion.js"></script>
     <title>Sucursales</title>
     <link rel="stylesheet" href="css/office.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -27,25 +28,26 @@
         <div id="menuSuperior">
             <input type="text" id="searchInput" placeholder="Buscar sucursales...">
         </div>
-        <div class="sucursal">
+        <div id="suc1"></div>
+        <div class="sucursal">     
             <h2>Sucursal 1</h2>
             <div class="slideshow-container" id="carrusel1">
                 <!-- Imágenes del carrusel 1 -->
                 <div class="mySlides">
                     <div class="img-container">
-                        <img src="img/icon.png" style="width:50%">
+                        <img src="img/imag1.jpg" style="width:55vw; height: 40vw; object-fit: cover;">
                     </div>
                 </div>
 
                 <div class="mySlides">
                     <div class="img-container">
-                        <img src="img/beta.png" style="width:50%">
+                        <img src="img/beta.png" style="width:55vw; height: 40vw; object-fit: cover">
                     </div>
                 </div>
 
                 <div class="mySlides">
                     <div class="img-container">
-                        <img src="img/debug.png" style="width:50%">
+                        <img src="img/debug.png" style="width:55vw; height: 40vw; object-fit: cover">
                     </div>
                 </div>
 
@@ -59,10 +61,17 @@
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
-            <p>Dirección de la sucursal 1</p>
-            <p>Teléfono de la sucursal 1</p>
-            <button id="actionButton">Agendar cita</button>
+            <p>Direccion: Dieciocho de Septiembre 746</p>
+            <p>Encargado: Braulio Perez (Jefe de tienda)</p>
+            <p>Horario: Lunes a sabado 09:00 a 18:00 hrs</p>
+            <a href="#Sucursal1">
+                <div class="item-sucursal">
+                    <h2>Ubicación en mapa</h2>
+                </div>
+            </a>
         </div>
+
+        
         <!-- Agrega más sucursales según sea necesario -->
 
         <div class="sucursal">
@@ -71,19 +80,19 @@
                 <!-- Imágenes del carrusel 2 -->
                 <div class="mySlides">
                     <div class="img-container">
-                        <img src="img/icon.png" style="width:50%">
+                        <img src="img/imag1.jpg" style="width:55vw; height: 40vw; object-fit: cover;">
                     </div>
                 </div>
 
                 <div class="mySlides">
                     <div class="img-container">
-                        <img src="img/beta.png" style="width:50%">
+                        <img src="img/beta.png" style="width:55vw; height: 40vw; object-fit: cover;">
                     </div>
                 </div>
 
                 <div class="mySlides">
                     <div class="img-container">
-                        <img src="img/debug.png" style="width:50%">
+                        <img src="img/debug.png" style="width:55vw; height: 40vw; object-fit: cover;">
                     </div>
                 </div>
 
@@ -97,10 +106,50 @@
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
-            <p>Dirección de la sucursal 2</p>
-            <p>Teléfono de la sucursal 2</p>
-            <button id="actionButton">Agendar cita</button>
+            <p>Direccion: El Roble 770, torre 2, piso 3</p>
+            <p>Encargado: Matias Rosales (Ejecutivo ventas)</p>
+            <p>Horario: Lunes a domingo 10:00 a 20:30 hrs</p>
+            <a href="#Sucursal2">
+                <div class="item-sucursal">
+                    <h2>Ubicación en mapa</h2>
+                </div>
+            </a>
+
+            
         </div>
+
+        <div class="fondo-sucursal" id="Sucursal1">
+            <div class="light-box-sucursal">
+                <div class="zoom-sucursal">
+                    <br>
+                    <h2>Sucursal 1</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.7278639895185!2d-72.10770492430068!3d-36.60886277230217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9668d7d7e6a5797d%3A0x7d84fca0abf3daea!2sEntel%20Chillan!5e0!3m2!1ses!2scl!4v1714676806733!5m2!1ses!2scl"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="sucursales-maps"></iframe>
+                </div>
+                <a href="#suc1" class="close2" id="suc2">
+                    <i class='bx bx-x-circle' style='color:black'></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="fondo-sucursal" id="Sucursal2">
+            <div class="light-box-sucursal">
+                <div class="zoom-sucursal">
+                    <br>
+                    <h2>Sucursal 2</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.7278639895185!2d-72.10770492430068!3d-36.60886277230217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9668d7d7e6a5797d%3A0x7d84fca0abf3daea!2sEntel%20Chillan!5e0!3m2!1ses!2scl!4v1714676806733!5m2!1ses!2scl"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="sucursales-maps"></iframe>
+                </div>
+                <a href="#suc2" class="close2">
+                    <i class='bx bx-x-circle' style='color:black'></i>
+                </a>
+            </div>
+        </div>
+
         <div id="content">
             <img style="display: block; margin: auto; width: 50%;" src="img/footter.png" alt="sponsor">
         </div>
