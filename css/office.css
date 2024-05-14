@@ -256,9 +256,9 @@ a{
     display: flex;
     text-align: center;
     width: 40vw;
-    margin-left: 15vw;
-    padding: .5em;
-    padding-left: 2.5em;
+    margin-left: 16vw;
+    padding: .2em;
+    padding-left: 2em;
     border: #042ffb solid 1vw;
     border-radius: 1em;
 }
@@ -267,7 +267,6 @@ a{
     width: 80vw;
     height: 65vw;
     margin-left: 5vw;
-    margin-top: 0.5vw;
     border-radius: 1em;
 }
 
