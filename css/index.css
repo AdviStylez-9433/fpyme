@@ -41,31 +41,31 @@ body {
     top: 0;
     z-index: 1;
     word-wrap: break-word;
-}
-
-.container-bar a{
+  }
+  
+  .container-bar a{
     margin-left: 20%;
-}
-
-#logo{
+  }
+  
+  #logo{
     border-radius: 1em;
     margin-left: 1em;
     line-height: 50px;
-}
-
-#user{
+  }
+  
+  #user{
     font-size: 50px;
     border-radius: 1em;
-    margin-left: 1.5em;
+    margin-left: 1em;
     color: black;
     margin-top: 1vw;
-
-}
-
-.container-bar p{
+  
+  }
+  
+  .container-bar p{
     font-size: 19px;
     margin-top: 5%;
-}
+  }
 
 .banner-sup{
     background-color: #fff;
