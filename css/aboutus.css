@@ -17,12 +17,17 @@ body {
 }
 
 #content {
+    margin-top: 30vw;
+}
+
+.contents{
+    margin-left: 5vw;
+    margin-right: 5vw;
     padding: 20px;
     transition: margin-left 0.5s;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
     border-radius: 10px; /* Agrega bordes redondeados */
-    margin: 0 20px;
 }
 
 #content.img {
@@ -43,7 +48,7 @@ body {
 }
 
 .container-bar a{
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 #logo{
@@ -55,14 +60,13 @@ body {
 #user{
     font-size: 50px;
     border-radius: 1em;
-    margin-left: 1em;
+    margin-left: 1.5em;
     color: black;
-    margin-top: 9%;
-
+    margin-top: 1vw;
 }
 
 .container-bar p{
-    font-size: 21px;
+    font-size: 19px;
 }
 
 .slideshow-container {
