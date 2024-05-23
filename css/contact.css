@@ -1,11 +1,24 @@
+/* estilos generales */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #efeded;
+  background-color: white;
+  text-decoration: none;
 }
 
+h1{
+  color: black;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+/* barra superior */
 .container-bar{
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 70px;
@@ -18,36 +31,36 @@ body {
 }
 
 .container-bar a{
-  margin-left: 20%;
+margin-left: 20%;
 }
 
 #logo{
-  border-radius: 1em;
-  margin-left: 1em;
-  line-height: 50px;
+margin-left: 1em;
+margin-top: 0.5em;
+border-radius: 15em;
 }
 
 #user{
-  font-size: 50px;
-  border-radius: 1em;
-  margin-left: 1em;
-  color: black;
-  margin-top: 1vw;
-
+font-size: 50px;
+border-radius: 1em;
+margin-left: 1em;
+color: black;
+margin-top: 1vw;
 }
 
 .container-bar p{
-  font-size: 19px;
-  margin-top: 5%;
+font-size: 19px;
+margin-top: 5%;
+margin-left: 2%;
 }
 
 #actionButton {
   width: 30vw;
   margin-left: 21.5vw;
   background-color: white;
-  color: #042ffb;
+  color: black;
   padding: 10px 20px;
-  border: #042ffb solid 0.1em;
+  border: #a2fa1b solid 0.2em;
   border-radius: 1em;
   cursor: pointer;
   font: Arial;
@@ -58,23 +71,11 @@ body {
   background-color: #efeded;
 }
 
-#content {
-  padding: 20px;
-  transition: margin-left 0.5s;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
-  border-radius: 10px; /* Agrega bordes redondeados */
-  margin: 0 20px;
-}
-
-  h1 {
-    text-align: center;
-  }
-
   .container {
     display: block;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 1em;
+    border: #a2fa1b solid 0.2em;;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 0 auto;

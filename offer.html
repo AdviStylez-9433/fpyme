@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/offer.css">
   <script src="js/aplicacion.js"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Ofertas</title>
 </head>
 
@@ -15,91 +16,58 @@
    <header>
     <nav>
         <div class="container-bar">
-            <img src="img/main.png" alt="logo" id="logo" width="15%" height="90%">
+            <img src="img/icono.PNG" alt="logo" id="logo" width="13%" height="80%">
             <p>‎ ¡Hola, User!</p>
             <a href="user.html"><img src="img/profile.png" id="user" style="width: 15vw; height: 15vw;"></a>
         </div>
     </nav>
-  </header>
+</header>
 
   <div id="oferta">
-    <h1>Ofertas y descuentos</h1>
+    <h1 id="end1">Ofertas y descuentos</h1>
     <div id="menuSuperior">
       <input type="text" id="searchInput" placeholder="Buscar ofertas...">
     </div>
+
     <div class="ofertas">
-      <div class="slideshow-container" id="carrusel1">
-        <!-- Imágenes del carrusel 1 -->
-        <div class="mySlides">
-          <div class="img-container">
-            <img src="img/icon.png" style="width:50%">
-          </div>
-        </div>
-
-        <div class="mySlides">
-          <div class="img-container">
-            <img src="img/beta.png" style="width:50%">
-          </div>
-        </div>
-
-        <div class="mySlides">
-          <div class="img-container">
-            <img src="img/debug.png" style="width:50%">
-          </div>
-        </div>
-
-        <!-- Botones para cambiar de imagen -->
-        <a class="prev" onclick="carrusel1.plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="carrusel1.plusSlides(1)">&#10095;</a>
-
-        <div class="dot-container" style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-      </div>
+      <a href="#oferta1">
+        <img src="img/imagen2.PNG" alt="">
+      </a>
       <h2>Oferta 1</h2>
       <p>Precio actual 1</p>
       <p>Precio antiguo 1</p>
-      <button id="actionButton">Ver oferta</button><br>
+      <p id="end2">Descripcion 1</p>
     </div>
 
     <div class="ofertas">
-      <div class="slideshow-container" id="carrusel2">
-        <!-- Imágenes del carrusel 2 -->
-        <div class="mySlides">
-          <div class="img-container">
-            <img src="img/icon.png" style="width:50%">
-          </div>
-        </div>
-
-        <div class="mySlides">
-          <div class="img-container">
-            <img src="img/beta.png" style="width:50%">
-          </div>
-        </div>
-
-        <div class="mySlides">
-          <div class="img-container">
-            <img src="img/debug.png" style="width:50%">
-          </div>
-        </div>
-
-        <!-- Botones para cambiar de imagen -->
-        <a class="prev" onclick="carrusel2.plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="carrusel2.plusSlides(1)">&#10095;</a>
-
-        <div class="dot-container" style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-      </div>
+      <a href="#oferta2">
+        <img src="img/imagen2.PNG" alt="">
+      </a>
       <h2>Oferta 2</h2>
       <p>Precio actual 2</p>
       <p>Precio antiguo 2</p>
-      <button id="actionButton">Ver oferta</button><br>
+      <p>Descripcion 2</p>
     </div>
+
+    <div class="fondo" id="oferta1">
+      <div class="light-box">
+        <img src="img/imagen2.PNG" alt="">
+      </div>
+      <a class="close" href="#end1">
+        <i class='bx bx-x-circle' style='color:black'></i>
+    </a>
+    </div>
+
+    <div class="fondo" id="oferta2">
+      <div class="light-box">
+        <img src="img/imagen2.PNG" alt="">
+      </div>
+      <a class="close" href="#end2">
+        <i class='bx bx-x-circle' style='color:black'></i>
+    </a>
+    </div>
+
+
 
     <!-- Agrega más sucursales según sea necesario -->
 

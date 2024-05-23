@@ -1,10 +1,25 @@
+/* estilos generales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: white;
+    text-decoration: none;
 }
 
+h1{
+    color: black;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/* barra superior */
 .container-bar{
-    background-color: #fff;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 70px;
@@ -16,52 +31,47 @@ body {
     word-wrap: break-word;
   }
   
-  .container-bar a{
-    margin-left: 20%;
-  }
+.container-bar a{
+  margin-left: 20%;
+}
   
-  #logo{
-    border-radius: 1em;
-    margin-left: 1em;
-    line-height: 50px;
-  }
+#logo{
+  margin-left: 1em;
+  margin-top: 0.5em;
+  border-radius: 15em;
+}
   
-  #user{
-    font-size: 50px;
-    border-radius: 1em;
-    margin-left: 1em;
-    color: black;
-    margin-top: 1vw;
+#user{
+  font-size: 50px;
+  border-radius: 1em;
+  margin-left: 1em;
+  color: black;
+  margin-top: 1vw;
+}
   
-  }
-  
-  .container-bar p{
-    font-size: 19px;
-    margin-top: 5%;
-  }
-
-#actionButton {
-    float: right;
-    background-color: #008476;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font: Arial;
-    font-size: 20px;
+.container-bar p{
+  font-size: 19px;
+  margin-top: 5%;
+  margin-left: 2%;
 }
 
-h1 {
+/* buscador */
+#menuSuperior {
+    background-color: white;
+    padding: 10px;
     text-align: center;
 }
 
-#content {
-    margin-top: 80px;
-    padding: 20px;
-    transition: margin-left 0.5s;
+#searchInput {
+    padding: 10px;
+    width: 50vw;
+    border: 0.15em solid #a2fa1b;
+    border-radius: 0.5em;
+    margin-left: 10vw;
 }
 
+
+/* sucursales */
 #sucursales {
     margin-top: 15vw;
     display: flex;
@@ -78,7 +88,7 @@ h1 {
 }
 
 .sucursal {
-    border: 0.2em solid #042ffb;
+    border: 0.2em solid #a2fa1b;
     border-radius: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     padding: 15px;
@@ -114,20 +124,7 @@ h1 {
     /* Sin borde para el iframe */
 }
 
-#menuSuperior {
-    background-color: white;
-    padding: 10px;
-    color: white;
-    text-align: center;
-}
 
-#searchInput {
-    padding: 10px;
-    width: 50vw;
-    border: 0.1em solid #042ffb;
-    border-radius: 0.5em;
-    margin-left: 10vw;
-}
 
 .sucursal p{
     font-size: 15px;
@@ -159,7 +156,7 @@ h1 {
     border-radius: 1em;
     line-height: 2.5vw;
     text-align: center;
-    background-color: #042ffb;
+    background-color: #a2fa1b;
 }
 
 .next {
@@ -170,7 +167,7 @@ h1 {
 
 .prev:hover,
 .next:hover {
-    background-color: #001479;
+    background-color: #74c002;
 }
 
 /* Estilos para los puntos */
@@ -228,20 +225,15 @@ h1 {
     width: 90%;
     height: 10vw;
     background-color: white;
-    border: #042ffb solid 0.15em;
+    border: #a2fa1b solid 0.15em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 1em;
-}
-
-a{
-    list-style: none;
-    text-decoration: none;
 }
 
 .item-sucursal h2{
     text-align: center;
     line-height: 8vw;
-    color:#042ffb;
+    color:black;
 }
 
 .light-box-sucursal{
@@ -264,7 +256,7 @@ a{
     margin-left: 16vw;
     padding: .2em;
     padding-left: 2em;
-    border: #042ffb solid 1vw;
+    border: #a2fa1b solid 1vw;
     border-radius: 1em;
 }
 
@@ -289,4 +281,10 @@ a{
 
 #suc1{
     margin-top: -15vw;
+}
+
+#content {
+    margin-top: 80px;
+    padding: 20px;
+    transition: margin-left 0.5s;
 }
