@@ -6,107 +6,251 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de imagenes</title>
     <link rel="stylesheet" href="css/gallery.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
+    <!-- Barra superior -->
     <header>
         <nav>
             <div class="container-bar">
-                <img src="img/main.png" alt="logo" id="logo">
+                <img src="img/icono.PNG" alt="logo" id="logo" width="13%" height="80%">
                 <p>‎ ¡Hola, User!</p>
-                <a href="user.html"><img src="img/profile.png" id="user" style="width: 50%; height: 75%;"></a>
+                <a href="user.html"><img src="img/profile.png" id="user" style="width: 15vw; height: 15vw;"></a>
             </div>
         </nav>
     </header>
-    
-    <br><br><br><br><br>
-    <div id="content">
-        <h1 style="text-align: center;">Galeria de imagenes</h1>
-        <p>Esta es tu galeria completamente animada, llenala de imagenes y fotografias que caracterizen tu empresa y le
-            dan su identidad para que la compartas con tus clientes.</p>
 
-        <div class="carousel" id="carousel1">
-            <div class="slides" id="slides">
-                <img src="img/gallery1.jpg" alt="Image 1">
-                <img src="img/gallery2.jpeg" alt="Image 2">
-                <img src="img/gallery3.jpg" alt="Image 3">
-                <img src="img/gallery4.jpeg" alt="Image 4">
-                <img src="img/gallery5.jpg" alt="Image 5">
-                <img src="img/gallery6.jpg" alt="Image 6">
-                <img src="img/gallery7.png" alt="Image 7">
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div id="content">
-        <div class="dot-container" style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-        </div>
+    <div class="content" id="primera">
+        <h1 style="text-align: center;">Galeria 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quod nihil. 
+        Nesciunt, ducimus? Ullam deserunt officiis libero molestiae eum, inventore,</p>
 
-        <h1 style="text-align: center;">Galeria de premios</h1>
-        <p>Esta es tu galeria completamente animada, llenala de imagenes y fotografias que caracterizen tu empresa y le
-            dan su identidad para que la compartas con tus clientes.</p>
-        <div class="carousel" id="carousel2">
-            <div class="slides" id="slides">
-                <img src="img/gallery7.png" alt="Image 7">
-                <img src="img/gallery3.jpg" alt="Image 3">
-                <img src="img/gallery5.jpg" alt="Image 5">
-                <img src="img/gallery1.jpg" alt="Image 1">
-                <img src="img/gallery6.jpg" alt="Image 6">
-                <img src="img/gallery2.jpeg" alt="Image 2">
-                <img src="img/gallery4.jpeg" alt="Image 4">                
+        <div class="container-galeria1" id="cont-galeria">
+            <div class="galeria">
+                <a href="#imagen1">
+                    <img src="img/imagen1.PNG" alt="imagen 1">
+                </a>
+                <a href="#imagen2">
+                    <img src="img/imagen1,1.PNG" alt="imagen 2">
+                </a>
+                <a href="#imagen3">
+                    <img src="img/imagen1,2.PNG" alt="imagen 3">
+                </a>
+                <a href="#imagen4">
+                    <img src="img/imagen1,3.PNG" alt="imagen 4">
+                </a>
+                <a href="#imagen5">
+                    <img src="img/imagen1,4.PNG" alt="imagen 5">
+                </a>
+                <a href="#imagen6">
+                    <img src="img/imagen1,5.PNG" alt="imagen 6">
+                </a>
             </div>
         </div>
-        <div class="dot-container" style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
+        <div class="opcion">
+            <button id="btnShow">
+                Ver mas...
+            </button>
         </div>
     </div>
+
+    <div class="light-box" id="imagen1">
+        <a href="#imagen6" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1.PNG" alt="">
+        <a href="#imagen2" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen2">
+        <a href="#imagen1" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,1.PNG" alt="">
+        <a href="#imagen3" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen3">
+        <a href="#imagen2" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,2.PNG" alt="">
+        <a href="#imagen4" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen4">
+        <a href="#imagen3" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,3.PNG" alt="">
+        <a href="#imagen5" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen5">
+        <a href="#imagen4" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,4.PNG" alt="">
+        <a href="#imagen6" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen6">
+        <a href="#imagen5" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,5.PNG" alt="">
+        <a href="#imagen1" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
     <br>
     <br>
-    <div id="content">
-        <h1 style="text-align: center;">Galeria de noticias</h1>
-        <p>Esta es tu galeria completamente animada, llenala de imagenes y fotografias que caracterizen tu empresa y le
-            dan su identidad para que la compartas con tus clientes.</p>
-        <div class="carousel" id="carousel3">
-            <div class="slides" id="slides">
-                <img src="img/gallery4.jpeg" alt="Image 4">
-                <img src="img/gallery2.jpeg" alt="Image 2">
-                <img src="img/gallery6.jpg" alt="Image 6">
-                <img src="img/gallery1.jpg" alt="Image 1">
-                <img src="img/gallery5.jpg" alt="Image 5">
-                <img src="img/gallery3.jpg" alt="Image 3">
-                <img src="img/gallery7.png" alt="Image 7">
-                               
+    <div class="content">
+        <h1 style="text-align: center;">Galeria 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quod nihil. 
+            Nesciunt, ducimus? Ullam deserunt officiis libero molestiae eum, inventore,</p>
+            <div class="container-galeria1" id="cont-galeria2">
+                <div class="galeria">
+                    <a href="#imagen1,2">
+                        <img src="img/imagen1.PNG" alt="imagen 1">
+                    </a>
+                    <a href="#imagen2,2">
+                        <img src="img/imagen1,1.PNG" alt="imagen 2">
+                    </a>
+                    <a href="#imagen3,2">
+                        <img src="img/imagen1,2.PNG" alt="imagen 3">
+                    </a>
+                    <a href="#imagen4,2">
+                        <img src="img/imagen1,3.PNG" alt="imagen 4">
+                    </a>
+                    <a href="#imagen5,2">
+                        <img src="img/imagen1,4.PNG" alt="imagen 5">
+                    </a>
+                    <a href="#imagen6,2">
+                        <img src="img/imagen1,5.PNG" alt="imagen 6">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="dot-container" style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-        </div>
+            <div class="opcion">
+                <button id="btnShow2">
+                    Ver mas...
+                </button>
+            </div>
     </div>
     <br>
+
+    <div class="light-box" id="imagen1,2">
+        <a href="#imagen6,2" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1.PNG" alt="">
+        <a href="#imagen2,2" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen2,2">
+        <a href="#imagen1,2" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,1.PNG" alt="">
+        <a href="#imagen3,2" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen3,2">
+        <a href="#imagen2,2" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,2.PNG" alt="">
+        <a href="#imagen4,2" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen4,2">
+        <a href="#imagen3,2" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,3.PNG" alt="">
+        <a href="#imagen5,2" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen5,2">
+        <a href="#imagen4,2" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,4.PNG" alt="">
+        <a href="#imagen6,2" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
+
+    <div class="light-box" id="imagen6,2">
+        <a href="#imagen5,2" class="next-l">
+            <i class='bx bx-left-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <img src="img/imagen1,5.PNG" alt="">
+        <a href="#imagen1,2" class="next-r">
+            <i class='bx bx-right-arrow-alt' style='color:#ffffff'></i>
+        </a>
+        <a href="#titulo-galeria" class="close">
+            <i class='bx bx-x-circle' style='color:#ffffff'></i>
+        </a>
+    </div>
 
     <img style="display: block; margin: auto; width: 300px;" src="img/footter.png" alt="sponsor"><br>
 
-
+    <script src="js/ShowHide.js"></script>
+    <script src="js/ShowHide2.js"></script>
     <script>
 
         const carousel1 = document.getElementById('carousel1');

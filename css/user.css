@@ -1,29 +1,40 @@
+/* estilos generales */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #efeded;
-
-  }
-
-  #actionButton {
-    width: 30vw;
-    margin-left: 15vw;
-    background-color: white;
-    color: #042ffb;
-    padding: 10px 20px;
-    border: #042ffb solid 0.1em;
-    border-radius: 1em;
-    cursor: pointer;
-    font: Arial;
-    font-size: 20px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  text-decoration: none;
 }
 
-#actionButton:active {
-    background-color: #efeded;
+h1{
+  color: black;
+  text-align: center;
 }
 
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* barra superior */
 .container-bar{
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 70px;
@@ -36,43 +47,59 @@ body {
 }
 
 .container-bar a{
-  margin-left: 20%;
+margin-left: 20%;
 }
 
 #logo{
-  border-radius: 1em;
-  margin-left: 1em;
-  line-height: 50px;
+margin-left: 1em;
+margin-top: 0.5em;
+border-radius: 15em;
 }
 
 #user{
-  font-size: 50px;
-  border-radius: 1em;
-  margin-left: 1em;
-  color: black;
-  margin-top: 1vw;
-
+font-size: 50px;
+border-radius: 1em;
+margin-left: 1em;
+color: black;
+margin-top: 1vw;
 }
 
 .container-bar p{
-  font-size: 19px;
-  margin-top: 5%;
+font-size: 19px;
+margin-top: 5%;
+margin-left: 2%;
 }
 
-  #content {
-    padding: 20px;
-    transition: margin-left 0.5s;
-  }
+/* boton de guardar */
+#actionButton {
+    width: 30vw;
+    margin-left: 20vw;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: #a2fa1b solid 0.2em;
+    border-radius: 1em;
+    cursor: pointer;
+    font: Arial;
+    font-size: 20px;
+}
+
+#actionButton:active {
+    background-color: #efeded;
+}
+
+
+/* contenido */
 
   .container {
     display: block;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 0 auto;
-    width: 300px;
-    margin-top: 1rem;
+    width: 70vw;
+    margin-top: 25vw;
     margin-bottom: 1rem;
   }
 
@@ -81,25 +108,6 @@ body {
     height: 40%;
     display: block;
     margin: auto;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  label {
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-
-  input {
-    padding: 8px;
-    margin-bottom: 10px;
   }
 
   .strength-meter {
@@ -153,20 +161,4 @@ body {
     font-weight: bold;
     text-align: left;
     margin-bottom: 10px;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  a.sin-subrayado {
-    text-decoration: none;
-  }
-
-  a:visited {
-    color: #042ffb;
-  }
-
-  a:link {
-    color: #042ffb;
   }

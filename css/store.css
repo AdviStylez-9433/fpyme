@@ -1,0 +1,145 @@
+/* estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    text-decoration: none;
+  }
+  
+  h1{
+    color: black;
+  }
+  
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+
+/* barra superior */
+.container-bar{
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    word-wrap: break-word;
+  }
+  
+.container-bar a{
+  margin-left: 20%;
+}
+  
+#logo{
+  margin-left: 1em;
+  margin-top: 0.5em;
+  border-radius: 15em;
+}
+  
+#user{
+  font-size: 50px;
+  border-radius: 1em;
+  margin-left: 1em;
+  color: black;
+  margin-top: 1vw;
+}
+  
+.container-bar p{
+  font-size: 19px;
+  margin-top: 5%;
+  margin-left: 2%;
+}
+
+/* buscador */
+#menuSuperior {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+  
+#searchInput {
+    padding: 10px;
+    width: 50vw;
+    border: 0.15em solid #a2fa1b;
+    border-radius: 0.5em;
+}
+
+#catalog {
+    margin-top: 25vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    column-count: 1;
+    column-gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 0.2em solid #a2fa1b;
+    border-radius: 1em;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+}
+
+.product img {
+    width: 75vw;
+    height: 60vw;
+    border-radius: 1em;
+    object-fit: cover;
+}
+
+.product h3 {
+    color: black;
+    text-align: center;
+}
+
+.product p {
+    color: black;
+}
+
+.fondo{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position:fixed;
+    background: rgba(0,0,0,0.5);
+    transition: tranform 0.4s ease-in-out;
+    transform: scale(0);
+    z-index: 1000;
+  }
+  
+  .fondo:target{
+    transform: scale(1);
+  }
+  
+  .light-box{
+    width: 90vw;
+      height: 95vw;
+      position: fixed;
+      top: 25%;
+      left: 0;
+      margin-left: 5%;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 1em;
+      display: flex;
+  }
+  
+  .light-box img{
+    width: 90vw;
+  }
+  
+  .close{
+    display: block;
+    position: absolute;
+    top: 56vw;
+    right: 7vw;
+    font-size: 6vw;
+    
+  }
