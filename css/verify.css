@@ -1,20 +1,47 @@
+/* estilos generales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #efeded;
+    background-color: white;
+    text-decoration: none;
+  }
+  
+  h1{
+    color: black;
+  }
+  
+  a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
 }
 
 #actionButton {
     width: 30vw;
     margin-left: 15vw;
     background-color: white;
-    color: #042ffb;
+    color: black;
     padding: 10px 20px;
-    border: #042ffb solid 0.1em;
+    border: 0.2em solid #a2fa1b;
     border-radius: 1em;
     cursor: pointer;
     font: Arial;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #actionButton:active {
@@ -31,10 +58,11 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 0.2em solid #a2fa1b;
     padding: 20px;
     margin: 0 auto;
     width: 60vw;
-    margin-top: 20vw;
+    margin-top: 25vw;
     margin-bottom: 5vw;
 }
 
@@ -43,39 +71,4 @@ body {
     height: 40%;
     display: block;
     margin: auto;
-}
-
-h1 {
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input {
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a.sin-subrayado {
-    text-decoration: none;
-}
-
-a:visited {
-    color: #633ae5;
-}
-
-a:link {
-    color: #633ae5;
 }
