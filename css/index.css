@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: #7dd956;
     text-decoration: none;
 }
 
@@ -17,41 +17,47 @@ a{
 }
 
 /* barra superior */
-.container-bar{
-    background-color: white;
+.nav{
+    background-color: #2e711c;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 80px;
     width: 100%;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
     position: fixed;
-    top: 0;
     z-index: 1;
-    word-wrap: break-word;
+}
+.container-bar{
+    height: 80px;
+    display:block;
   }
   
 .container-bar a{
-  margin-left: 20%;
+  position: absolute;
+  top: 0;
+  right: 1.5vw;
+  height: 70px;
 }
   
 #logo{
+  position: absolute;
+  top: 0;
   margin-left: 1em;
   margin-top: 0.5em;
   border-radius: 15em;
 }
   
 #user{
-  font-size: 50px;
+  font-size: 65px;
   border-radius: 1em;
-  margin-left: 1em;
-  color: black;
-  margin-top: 1vw;
+  margin-left: -1em;
+  margin-top: 2vw;
 }
   
-.container-bar p{
-  font-size: 19px;
-  margin-top: 5%;
-  margin-left: 2%;
+.container-bar h1{
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 28vw;
+  font-size: 25px;
 }
 
 /* slider de imagenes superior */
@@ -83,28 +89,32 @@ a{
     width: 95%;
     height: 100%;
     border-radius: 1em;
+    border: #2e711c solid 0.2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     margin-left: 2.5%;
+    object-fit: cover;
 }
 
 /* accesos rapidos */
 
 .titulo1{
     text-align: center;
-    margin-top: -5px;
+    margin-top: 5vw;
+    color: white;
 }
 
 .container-accesos-rap{
     display: flex;
     flex-direction: row;
-    margin-top: -10px;
 }
 
 .card-acceso{
-    width: 30vw;
+    width: 28.5vw;
     margin-left: 2.5%;
-    background-color: rgb(224, 224, 224);
+    background-color: #e0dd69;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
+    border: #2e711c solid 0.2em;
     padding-bottom: 1.3em;
 }
 
@@ -118,16 +128,16 @@ a{
 .card-acceso a{
     display: block;
     width: 16vw;
-    margin-left: 2.5vw;
+    margin-left: 1.8vw;
     border-radius: 1em;
-    border: #a2fa1b solid 0.2em;
-    background-color: white;
+    border: #2e711c solid 0.2em;
+    background-color: #865234;
     padding: 0.5em 1.0em;
     font-size: 15px;
 }
 
 .card-acceso span {
-    color: black;
+    color: white;
 }
 
 #card1{
@@ -142,72 +152,6 @@ a{
     margin-left: 1.5vw;
 }
 
-/* Ofertas */
-
-.contenerdor-ofertas{
-    background-color: rgb(224, 224, 224);
-    width: 90%;
-    border-radius: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-left: 5%;
-    margin-top: -50px;
-}
-
-.slider-box-ofertas{
-    width: 95%;
-    height: auto;
-    margin: 50px auto 0;
-    overflow-x: hidden;
-}
-
-.slider-box-ofertas ul{
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    width: 300%;
-    animation: slide2 20s infinite alternate ease-in-out;
-}
-
-.slider-box-ofertas li{
-    list-style: none;
-    margin-left: 1%;
-    width: 50%;
-    height: 250px;
-    position: relative;
-    padding-top: 1em;
-    background-color: white;
-    border: #a2fa1b solid 0.15em;
-    border-radius: 1em;
-}
-
-#liUno{
-    margin-left: 0;
-}
-
-.slider-box-ofertas img {
-    width: 80%;
-    height: 50%;
-    border-radius: 1em;
-    margin-left: 10%;
-}
-
-.text{
-    position: absolute;
-    padding: 0px;
-    top: 130px;
-}
-
-.text h2{
-    font-size: 18px;
-    margin-bottom: -15px;
-    text-align: center;
-}
-
-.text p{
-    text-align: justify;
-    padding: 0.5em;
-    font-size: 12px;
-}
 
 /* sucursales */
 
